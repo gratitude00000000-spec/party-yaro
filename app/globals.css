@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #E8001C;
+    --primary-dark: #C0001A;
+    --line-green: #06C755;
+    --gold: #C9A84C;
+    --dark: #0F0F0F;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900 antialiased;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* Photo slider with CSS scroll snap */
+  .photo-slider {
+    @apply flex overflow-x-auto snap-x snap-mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .photo-slider::-webkit-scrollbar {
+    display: none;
+  }
+  .photo-slide {
+    @apply flex-none w-full snap-center;
+  }
+
+  /* LINE button styles */
+  .btn-line {
+    @apply flex items-center justify-center gap-2 bg-[#06C755] text-white font-bold rounded-xl py-4 px-6 active:scale-95 transition-transform;
+  }
+  .btn-line-sm {
+    @apply flex items-center justify-center gap-1.5 bg-[#06C755] text-white font-bold rounded-lg py-2.5 px-4 text-sm active:scale-95 transition-transform;
+  }
+
+  /* Primary button */
+  .btn-primary {
+    @apply flex items-center justify-center gap-2 bg-primary text-white font-bold rounded-xl py-4 px-6 active:scale-95 transition-transform;
+  }
+  .btn-primary-sm {
+    @apply flex items-center justify-center gap-1.5 bg-primary text-white font-bold rounded-lg py-2.5 px-4 text-sm active:scale-95 transition-transform;
+  }
+
+  /* Outline button */
+  .btn-outline {
+    @apply flex items-center justify-center gap-2 border-2 border-primary text-primary font-bold rounded-xl py-4 px-6 active:scale-95 transition-transform;
+  }
+
+  /* Tag chip */
+  .tag-chip {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-50 text-primary border border-red-100;
+  }
+  .tag-chip-dark {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-800 text-white;
+  }
+
+  /* Card */
+  .venue-card {
+    @apply bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 active:scale-[0.98] transition-transform;
+  }
+
+  /* Section title */
+  .section-title {
+    @apply text-2xl font-black text-gray-900 tracking-tight;
+  }
+  .section-title span {
+    @apply text-primary;
+  }
+
+  /* Bottom nav safe area */
+  .bottom-nav {
+    @apply fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 z-50;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Page container */
+  .page-container {
+    @apply max-w-2xl mx-auto pb-24;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Gradient overlays */
+  .gradient-dark-bottom {
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+  }
+  .gradient-hero {
+    background: linear-gradient(135deg, #0F0F0F 0%, #3D0009 60%, #1A0005 100%);
+  }
+
+  /* Safe area padding */
+  .pb-safe {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 5rem);
+  }
+
+  /* Touch friendly */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Scrollbar hidden */
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* FAQ accordion animation */
+details[open] summary ~ * {
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Swiper pagination dots */
+.swiper-pagination-bullet {
+  background: rgba(255,255,255,0.6) !important;
+}
+.swiper-pagination-bullet-active {
+  background: white !important;
+}
+
+/* Loading skeleton */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
