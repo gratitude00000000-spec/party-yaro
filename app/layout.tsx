@@ -38,27 +38,27 @@ const mplusRounded = Mochiy_Pop_One({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.party-yaro.com'),
   title: {
-    default: 'ぱーてぃー野郎 | 沖縄の二次会・貸切パーティー会場探しならここ！',
+    default: 'ぱーてぃー野郎｜沖縄の貸切パーティー会場探し',
     template: '%s | ぱーてぃー野郎',
   },
   description:
-    '沖縄の二次会・貸切パーティー会場探しはぱーてぃー野郎へ。那覇・北谷・宜野湾・浦添エリアの結婚式二次会・忘年会・歓送迎会・DJイベント会場を無料でご提案。相談・紹介完全無料。',
+    '沖縄の二次会・貸切パーティー会場探しなら「ぱーてぃー野郎」。那覇・北谷・浦添エリア対応。LINE相談・内覧手配無料。',
   keywords: [
     '沖縄 二次会',
-    '沖縄 貸切会場',
+    '沖縄 貸切パーティー',
     '那覇 二次会',
-    '那覇 貸切パーティー',
+    '那覇 貸切',
+    'パーティー会場',
+    '結婚式二次会',
     '沖縄 結婚式二次会',
-    '那覇 結婚式二次会',
-    '沖縄 パーティー会場',
     '沖縄 忘年会 会場',
     '沖縄 歓送迎会 会場',
     'ぱーてぃー野郎',
   ],
   openGraph: {
-    title: 'ぱーてぃー野郎 | 沖縄の二次会・貸切パーティー会場',
+    title: 'ぱーてぃー野郎｜沖縄の貸切パーティー会場探し',
     description:
-      '沖縄の二次会・貸切パーティー会場を無料でご提案。那覇・北谷・宜野湾・浦添エリア対応。',
+      '沖縄の二次会・貸切パーティー会場を無料でご提案。那覇・北谷・浦添エリア対応。LINE相談・内覧手配無料。',
     url: 'https://www.party-yaro.com',
     siteName: 'ぱーてぃー野郎',
     locale: 'ja_JP',
@@ -68,14 +68,15 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'ぱーてぃー野郎 | 沖縄の二次会・貸切パーティー会場',
+        alt: 'ぱーてぃー野郎｜沖縄の貸切パーティー会場探し',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ぱーてぃー野郎 | 沖縄の二次会・貸切パーティー会場',
-    description: '沖縄の二次会・貸切パーティー会場を無料でご提案。',
+    title: 'ぱーてぃー野郎｜沖縄の貸切パーティー会場探し',
+    description: '沖縄の二次会・貸切パーティー会場を無料でご提案。那覇・北谷・浦添エリア対応。',
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -93,7 +94,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
-  themeColor: '#E8001C',
+  themeColor: '#111111',
 };
 
 const organizationSchema = {
@@ -135,7 +136,9 @@ export default function RootLayout({
       <head>
         {/* ── Favicon ── */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png" />
+        <link rel="icon" type="image/png" sizes="64x64" href="/icons/icon-64.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
 
         {/* ── Apple Touch Icon (iPhone ホーム画面追加) ── */}
@@ -148,7 +151,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="ぱーてぃー野郎" />
         <meta name="application-name" content="ぱーてぃー野郎" />
-        <meta name="theme-color" content="#E8001C" />
+        <meta name="theme-color" content="#111111" />
         <meta name="format-detection" content="telephone=no" />
         <script
           type="application/ld+json"
