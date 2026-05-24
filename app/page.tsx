@@ -93,6 +93,14 @@ export default function HomePage() {
           </h1>
         </div>
 
+        {/* テキスト可読性グラデーション（動画とテキストの間） */}
+        <div
+          className="absolute inset-0 pointer-events-none z-[15]"
+          style={{
+            background: 'linear-gradient(to right, rgba(10,0,4,0.72) 0%, rgba(10,0,4,0.65) 42%, rgba(10,0,4,0.25) 68%, transparent 100%)',
+          }}
+        />
+
         {/* キャラクター（セクション全体を基準・右側・CTA直上まで） */}
         <div className="absolute right-[-90px] bottom-[140px] w-[280px] sm:w-[320px] pointer-events-none select-none z-10">
           <video
