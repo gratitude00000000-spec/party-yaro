@@ -4,36 +4,22 @@
   "description": "沖縄の二次会・貸切パーティー会場を探すならぱーてぃー野郎。結婚式二次会・忘年会・歓送迎会・イベント会場を無料でご提案。",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0F0F0F",
+  "background_color": "#E8001C",
   "theme_color": "#E8001C",
   "orientation": "portrait",
   "icons": [
-    {
-      "src": "/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
+    { "src": "/icons/icon-32.png",  "sizes": "32x32",   "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
   "categories": ["lifestyle", "entertainment"],
   "lang": "ja",
   "dir": "ltr",
   "shortcuts": [
-    {
-      "name": "会場を探す",
-      "url": "/search",
-      "description": "エリア・人数・用途で会場を検索"
-    },
-    {
-      "name": "LINEで相談",
-      "url": "https://line.me/ti/p/@381ivfov",
-      "description": "無料でLINE相談"
-    }
+    { "name": "会場を探す",  "url": "/search",                        "description": "エリア・人数・用途で会場を検索" },
+    { "name": "LINEで相談", "url": "https://line.me/ti/p/@381ivfov", "description": "無料でLINE相談" }
   ]
 }

@@ -133,11 +133,22 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${notoSansJP.variable} ${outfit.variable} ${bebasNeue.variable} ${mplusRounded.variable}`}>
       <head>
-        <link rel="icon" href="/icons/icon-192.png" />
-        <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+        {/* ── Favicon ── */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+
+        {/* ── Apple Touch Icon (iPhone ホーム画面追加) ── */}
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180.png" />
+
+        {/* ── PWA / Web App ── */}
+        <link rel="manifest" href="/manifest.json" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="ぱーてぃー野郎" />
+        <meta name="application-name" content="ぱーてぃー野郎" />
+        <meta name="theme-color" content="#E8001C" />
         <meta name="format-detection" content="telephone=no" />
         <script
           type="application/ld+json"
