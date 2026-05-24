@@ -104,9 +104,9 @@ export default function HomePage() {
             className="w-full h-auto object-contain object-bottom"
             style={{
               mixBlendMode: 'multiply',
-              maskImage: 'linear-gradient(to right, transparent 0%, black 18%, black 80%, transparent 100%), linear-gradient(to top, transparent 0%, black 6%, black 100%)',
+              maskImage: 'linear-gradient(to right, transparent 0%, black 18%, black 80%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 8%, black 94%, transparent 100%)',
               maskComposite: 'intersect',
-              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 18%, black 80%, transparent 100%), linear-gradient(to top, transparent 0%, black 6%, black 100%)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 18%, black 80%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 8%, black 94%, transparent 100%)',
               WebkitMaskComposite: 'source-in',
             }}
           />
@@ -128,13 +128,10 @@ export default function HomePage() {
                   <span key={c+i} className="inline-block" style={{ color: '#fff', textShadow: '0 0 16px rgba(255,255,255,0.8)', animation: `slideInRight 0.4s ease-out ${i * 0.09}s forwards`, opacity: 0 }}>{c}</span>
                 ))}
                 <span className="animate-party-glow" style={{ display: 'inline' }}>
-                  {['パ','ー','テ','ィ','ー'].map((c, i) => (
+                  {['パ','ー','テ','ィ','ー','会','場'].map((c, i) => (
                     <span key={c+i} className="inline-block" style={{ color: '#FFE04B', animation: `slideInRight 0.4s ease-out ${(2 + i) * 0.09}s forwards`, opacity: 0 }}>{c}</span>
                   ))}
                 </span>
-                {['会','場'].map((c, i) => (
-                  <span key={c+i} className="inline-block" style={{ color: '#fff', textShadow: '0 0 16px rgba(255,255,255,0.8)', animation: `slideInRight 0.4s ease-out ${(7 + i) * 0.09}s forwards`, opacity: 0 }}>{c}</span>
-                ))}
               </span>
               {/* 行2: 専門サイト */}
               <span style={{ display: 'block' }}>
