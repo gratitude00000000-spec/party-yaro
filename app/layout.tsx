@@ -4,6 +4,7 @@ import Script from 'next/script';
 import './globals.css';
 import BottomNav from '@/components/BottomNav';
 import FloatingLine from '@/components/FloatingLine';
+import Header from '@/components/Header';
 import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 import { FavoritesProvider } from '@/lib/FavoritesContext';
 
@@ -174,6 +175,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans bg-white">
         <FavoritesProvider>
+          <Header />
           <main>{children}</main>
           <FloatingLine />
           <BottomNav />

@@ -58,7 +58,7 @@ export default function BottomNav() {
   const savedCount = ids.size;
 
   return (
-    <nav className="bottom-nav">
+    <nav className="bottom-nav lg:hidden">
       <div className="flex items-stretch h-20 max-w-2xl mx-auto">
         {leftItems.map((item) => (
           <NavTab key={item.href} {...item} pathname={pathname} />

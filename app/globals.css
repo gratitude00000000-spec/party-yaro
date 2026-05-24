@@ -92,7 +92,7 @@
 
   /* Page container */
   .page-container {
-    @apply max-w-2xl mx-auto pb-24;
+    @apply max-w-2xl mx-auto pb-24 lg:max-w-7xl lg:pb-10;
   }
 }
 
