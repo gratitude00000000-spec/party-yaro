@@ -82,6 +82,18 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico',          sizes: 'any' },
+      { url: '/icons/icon-16.png',    sizes: '16x16',  type: 'image/png' },
+      { url: '/icons/icon-32.png',    sizes: '32x32',  type: 'image/png' },
+      { url: '/icons/icon-192.png',   sizes: '192x192', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
@@ -142,7 +154,9 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
 
         {/* ── Apple Touch Icon (iPhone ホーム画面追加) ── */}
-        <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180.png" />
+        {/* iOS は /apple-touch-icon.png をルートで自動探索するため両方設定 */}
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
         {/* ── PWA / Web App ── */}
         <link rel="manifest" href="/manifest.json" />
