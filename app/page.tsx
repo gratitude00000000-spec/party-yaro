@@ -153,6 +153,21 @@ export default function HomePage() {
           <p className="text-gray-200 text-[15px] leading-relaxed pr-[155px] sm:pr-[200px]">
             沖縄最大級の掲載数。<br />幹事の悩みを<br /><span className="text-white font-black">無料</span>で解決します。
           </p>
+
+          {/* ご利用用途 */}
+          <div className="mt-3 pr-[150px] sm:pr-0">
+            <p className="text-white/40 text-[10px] font-bold tracking-widest mb-1.5 uppercase">ご利用用途</p>
+            <div className="flex flex-wrap gap-1.5">
+              {['結婚式二次会', '忘年会', '歓送迎会', '新年会', '同窓会', '各種イベント'].map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[11px] text-white/80 bg-white/8 border border-white/20 rounded-full px-3 py-1 leading-none backdrop-blur-sm"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* フレキシブルスペーサー（CTA を下に押す） */}
