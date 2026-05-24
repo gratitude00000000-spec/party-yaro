@@ -94,14 +94,21 @@ export default function HomePage() {
         </div>
 
         {/* キャラクター（セクション全体を基準・右側・CTA直上まで） */}
-        <div className="absolute right-[-70px] bottom-[168px] w-[320px] sm:w-[360px] pointer-events-none select-none z-10">
-          <Image
-            src="/py-character-pin.png"
-            alt=""
-            width={200}
-            height={320}
+        <div className="absolute right-[-90px] bottom-[140px] w-[280px] sm:w-[320px] pointer-events-none select-none z-10">
+          <video
+            src="/py-logo-dance.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full h-auto object-contain object-bottom"
-            priority
+            style={{
+              mixBlendMode: 'multiply',
+              maskImage: 'linear-gradient(to right, transparent 0%, black 18%, black 80%, transparent 100%), linear-gradient(to top, transparent 0%, black 6%, black 100%)',
+              maskComposite: 'intersect',
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 18%, black 80%, transparent 100%), linear-gradient(to top, transparent 0%, black 6%, black 100%)',
+              WebkitMaskComposite: 'source-in',
+            }}
           />
         </div>
 
