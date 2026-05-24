@@ -5,38 +5,67 @@ import { Filter, X } from 'lucide-react';
 import VenueCard from '@/components/VenueCard';
 import type { Venue } from '@/lib/types';
 
-const AREAS = ['すべて', '那覇', '国際通り', '北谷', '沖縄市'];
+const MAIN_AREAS = ['那覇', '国際通り', '北谷', '沖縄市'];
+const AREAS = ['すべて', ...MAIN_AREAS, 'その他エリア'];
 const SCENES = ['すべて', '結婚式二次会', '忘年会', '新年会', '歓送迎会', '同窓会', '会社イベント', 'DJイベント', 'その他イベント'];
 const FACILITIES = ['すべて', '貸切OK', '飲み放題', 'プロジェクター', '音響', 'カラオケ', 'アミューズメント'];
+const CAPACITIES = [
+  { label: 'すべて',   value: 'すべて' },
+  { label: '20名以下', value: 'max20' },
+  { label: '20名以上', value: 'min20' },
+  { label: '40名〜',   value: 'min40' },
+  { label: '50名〜',   value: 'min50' },
+  { label: '80名以上〜', value: 'min80' },
+];
 
 type Props = {
   venues: Venue[];
   initialArea?: string;
   initialScene?: string;
   initialFacility?: string;
+  initialCapacity?: string;
 };
 
-export default function VenueListClient({ venues, initialArea, initialScene, initialFacility }: Props) {
-  const [area, setArea] = useState(initialArea || 'すべて');
-  const [scene, setScene] = useState(initialScene || 'すべて');
+function matchesCapacity(v: Venue, capacity: string): boolean {
+  if (capacity === 'すべて') return true;
+  if (capacity === 'max20') return v.capacityMin <= 20;
+  const minVal = parseInt(capacity.slice(3), 10); // 'min20' → 20
+  return v.capacityMax >= minVal;
+}
+
+export default function VenueListClient({ venues, initialArea, initialScene, initialFacility, initialCapacity }: Props) {
+  const [area,     setArea]     = useState(initialArea     || 'すべて');
+  const [scene,    setScene]    = useState(initialScene    || 'すべて');
   const [facility, setFacility] = useState(initialFacility || 'すべて');
+  const [capacity, setCapacity] = useState(initialCapacity || 'すべて');
   const [showFilters, setShowFilters] = useState(false);
 
   const filtered = useMemo(() => {
     return venues.filter((v) => {
-      if (area !== 'すべて' && v.area !== area) return false;
+      // エリア
+      if (area === 'その他エリア') {
+        if (MAIN_AREAS.includes(v.area)) return false;
+      } else if (area !== 'すべて') {
+        if (v.area !== area) return false;
+      }
+      // 用途
       if (scene !== 'すべて' && !v.scenes.includes(scene)) return false;
+      // 設備
       if (facility !== 'すべて' && !v.facilities.includes(facility)) return false;
+      // 人数
+      if (!matchesCapacity(v, capacity)) return false;
       return true;
     });
-  }, [venues, area, scene, facility]);
+  }, [venues, area, scene, facility, capacity]);
 
-  const hasActiveFilters = area !== 'すべて' || scene !== 'すべて' || facility !== 'すべて';
+  const activeCount = [area, scene, facility, capacity].filter((f) => f !== 'すべて').length;
+  const hasActiveFilters = activeCount > 0;
 
   const resetFilters = () => {
     setArea('すべて');
     setScene('すべて');
     setFacility('すべて');
+    setCapacity('すべて');
   };
 
   return (
@@ -69,7 +98,7 @@ export default function VenueListClient({ venues, initialArea, initialScene, ini
               絞り込み
               {hasActiveFilters && (
                 <span className="w-4 h-4 bg-white text-primary text-xs rounded-full flex items-center justify-center font-black">
-                  {[area, scene, facility].filter((f) => f !== 'すべて').length}
+                  {activeCount}
                 </span>
               )}
             </button>
@@ -97,6 +126,27 @@ export default function VenueListClient({ venues, initialArea, initialScene, ini
       {/* Expanded filter panel */}
       {showFilters && (
         <div className="bg-gray-50 border-b border-gray-100 px-4 py-4 space-y-4">
+          {/* 人数 */}
+          <div>
+            <p className="text-xs font-bold text-gray-500 mb-2 uppercase tracking-wide">人数</p>
+            <div className="flex flex-wrap gap-2">
+              {CAPACITIES.map(({ label, value }) => (
+                <button
+                  key={value}
+                  onClick={() => setCapacity(value)}
+                  className={`text-xs font-bold px-3 py-1.5 rounded-full border transition-colors ${
+                    capacity === value
+                      ? 'bg-primary text-white border-primary'
+                      : 'border-gray-200 text-gray-600 bg-white'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* 用途 */}
           <div>
             <p className="text-xs font-bold text-gray-500 mb-2 uppercase tracking-wide">用途</p>
             <div className="flex flex-wrap gap-2">
@@ -115,6 +165,8 @@ export default function VenueListClient({ venues, initialArea, initialScene, ini
               ))}
             </div>
           </div>
+
+          {/* 設備・条件 */}
           <div>
             <p className="text-xs font-bold text-gray-500 mb-2 uppercase tracking-wide">設備・条件</p>
             <div className="flex flex-wrap gap-2">

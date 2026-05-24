@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import {
-  MapPin, Users, Phone, MessageCircle, Check, Calendar, ChevronRight, Star,
+  MapPin, Users, Phone, MessageCircle, Check, ChevronRight, Star,
 } from 'lucide-react';
 import { getVenueBySlug, venues, LINE_URL, PHONE } from '@/data/venues';
 import PhotoSlider from '@/components/PhotoSlider';
@@ -196,31 +196,22 @@ export default function VenueDetailPage({ params }: Props) {
 
       {/* Fixed bottom CTA */}
       <div className="fixed bottom-16 left-0 right-0 bg-white border-t border-gray-100 px-4 py-3 z-30 max-w-2xl mx-auto">
-        <div className="flex gap-2">
+        <div className="flex gap-2.5">
           <a
             href={venue.lineUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-[2] flex items-center justify-center gap-2 bg-[#06C755] text-white font-black rounded-xl py-3.5 text-sm active:scale-95 transition-transform"
+            className="flex-1 flex items-center justify-center gap-2 bg-[#06C755] text-white font-black rounded-xl py-3.5 text-sm active:scale-95 transition-transform shadow-md shadow-green-900/20"
           >
             <MessageCircle size={18} />
-            LINEで相談
+            LINEで相談（無料）
           </a>
           <a
-            href={`tel:${venue.phone}`}
-            className="flex-1 flex items-center justify-center gap-1.5 border-2 border-gray-200 text-gray-700 font-bold rounded-xl py-3.5 text-sm active:scale-95 transition-transform"
+            href={`tel:${PHONE}`}
+            className="flex-1 flex items-center justify-center gap-1.5 bg-primary text-white font-black rounded-xl py-3.5 text-sm active:scale-95 transition-transform shadow-md shadow-red-900/20"
           >
             <Phone size={16} />
-            電話
-          </a>
-          <a
-            href={venue.lineUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-1.5 bg-primary text-white font-bold rounded-xl py-3.5 text-sm active:scale-95 transition-transform"
-          >
-            <Calendar size={16} />
-            空き確認
+            電話で問い合わせ
           </a>
         </div>
       </div>

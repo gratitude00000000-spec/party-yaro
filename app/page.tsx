@@ -10,7 +10,7 @@ import FaqAccordion from '@/components/FaqAccordion';
 
 const popularTags = [
   { label: '結婚式二次会', href: '/venues?scene=結婚式二次会' },
-  { label: '50名以上', href: '/venues?capacity=50' },
+  { label: '50名以上', href: '/venues?capacity=min50' },
   { label: '貸切OK', href: '/venues?facility=貸切OK' },
   { label: 'プロジェクターあり', href: '/venues?facility=プロジェクター' },
   { label: '那覇エリア', href: '/venues?area=那覇' },
@@ -211,11 +211,42 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* About: ぱーてぃー野郎とは？（SEO / LLMO / AIO対策） */}
+      <section className="px-4 py-7 border-b border-gray-100">
+        <h2 className="section-title mb-3">
+          ぱーてぃー野郎<span>とは？</span>
+        </h2>
+        <p className="text-sm text-gray-700 leading-relaxed mb-4">
+          ぱーてぃー野郎は、沖縄県内で二次会・貸切パーティー・結婚式二次会・忘年会・歓送迎会・各種イベントの会場を探している方向けの<strong className="text-gray-900 font-black">無料相談サービス</strong>です。那覇・国際通り・北谷・浦添などのエリアから、人数・予算・利用シーンに合う会場を提案し、内覧手配や予約相談までサポートします。
+        </p>
+        <ul className="space-y-2 mb-5">
+          {[
+            '相談・紹介・内覧手配はすべて無料',
+            '那覇・北谷など沖縄全域の二次会・貸切会場を提案',
+            'LINEまたは電話で気軽に相談できる',
+            '結婚式二次会・忘年会・歓送迎会・DJイベントに対応',
+            '幹事の会場探しの手間をまるごとサポート',
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-2">
+              <CheckCircle size={15} className="text-[#06C755] shrink-0 mt-0.5" />
+              <span className="text-sm text-gray-700">{item}</span>
+            </li>
+          ))}
+        </ul>
+        <LineLink
+          location="about_section"
+          className="flex items-center justify-center gap-2.5 bg-[#06C755] text-white font-black text-base rounded-2xl py-4 shadow-md shadow-green-900/20 active:scale-95 transition-transform"
+        >
+          <MessageCircle size={20} />
+          無料で相談してみる（LINE）
+        </LineLink>
+      </section>
+
       {/* Featured venues */}
       <section className="py-2 px-4">
         <div className="flex items-center justify-between mb-4">
           <h2 className="section-title">
-            おすすめ<span>会場</span>
+            今月のおすすめ<span>会場</span>
           </h2>
           <Link href="/venues" className="flex items-center gap-1 text-primary text-sm font-bold">
             すべて見る

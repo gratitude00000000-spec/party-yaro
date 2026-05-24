@@ -37,6 +37,7 @@ export default function VenuesPage({ searchParams }: Props) {
         initialArea={searchParams.area}
         initialScene={searchParams.scene}
         initialFacility={searchParams.facility}
+        initialCapacity={searchParams.capacity}
       />
     </div>
   );

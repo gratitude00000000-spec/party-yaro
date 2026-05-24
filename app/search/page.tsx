@@ -10,13 +10,13 @@ export const metadata: Metadata = {
     'エリア（那覇・国際通り・北谷・沖縄市）・人数・用途・設備で沖縄の貸切パーティー会場を検索。結婚式二次会・忘年会・歓送迎会・DJイベント・その他イベントに対応。',
 };
 
-const areas = ['那覇', '国際通り', '北谷', '沖縄市'];
+const areas = ['那覇', '国際通り', '北谷', '沖縄市', 'その他エリア'];
 const capacities = [
-  { label: '20名〜', value: '20' },
-  { label: '30名〜', value: '30' },
-  { label: '50名〜', value: '50' },
-  { label: '80名〜', value: '80' },
-  { label: '100名〜', value: '100' },
+  { label: '20名以下', value: 'max20' },
+  { label: '20名以上', value: 'min20' },
+  { label: '40名〜',   value: 'min40' },
+  { label: '50名〜',   value: 'min50' },
+  { label: '80名以上〜', value: 'min80' },
 ];
 const scenes = [
   '結婚式二次会', '忘年会', '新年会', '歓送迎会', '同窓会', '会社イベント', 'DJイベント', 'その他イベント',
