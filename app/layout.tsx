@@ -1,13 +1,37 @@
 import type { Metadata, Viewport } from 'next';
-import { Noto_Sans_JP } from 'next/font/google';
+import { Noto_Sans_JP, Outfit, Bebas_Neue, Mochiy_Pop_One } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import BottomNav from '@/components/BottomNav';
 import FloatingLine from '@/components/FloatingLine';
+import { GA_MEASUREMENT_ID } from '@/lib/gtag';
+import { FavoritesProvider } from '@/lib/FavoritesContext';
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
   weight: ['400', '500', '700', '900'],
   variable: '--font-noto',
+  display: 'swap',
+});
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  weight: ['500', '700', '900'],
+  variable: '--font-outfit',
+  display: 'swap',
+});
+
+const bebasNeue = Bebas_Neue({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-bebas',
+  display: 'swap',
+});
+
+const mplusRounded = Mochiy_Pop_One({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-dela',
   display: 'swap',
 });
 
@@ -107,7 +131,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja" className={notoSansJP.variable}>
+    <html lang="ja" className={`${notoSansJP.variable} ${outfit.variable} ${bebasNeue.variable} ${mplusRounded.variable}`}>
       <head>
         <link rel="icon" href="/icons/icon-192.png" />
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
@@ -121,9 +145,24 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans bg-white">
-        <main>{children}</main>
-        <FloatingLine />
-        <BottomNav />
+        <FavoritesProvider>
+          <main>{children}</main>
+          <FloatingLine />
+          <BottomNav />
+        </FavoritesProvider>
+        {/* GA4 */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}', { page_path: window.location.pathname });
+          `}
+        </Script>
       </body>
     </html>
   );

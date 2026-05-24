@@ -1,5 +1,6 @@
 import { MessageCircle, Gift } from 'lucide-react';
-import { LINE_URL, PHONE } from '@/data/venues';
+import { PHONE } from '@/data/venues';
+import LineLink from '@/components/LineLink';
 
 export default function LineBanner() {
   return (
@@ -20,15 +21,13 @@ export default function LineBanner() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a
-            href={LINE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <LineLink
+            location="banner"
             className="flex items-center justify-center gap-2.5 bg-[#06C755] text-white font-black text-lg rounded-2xl py-4 px-8 shadow-lg shadow-green-900/40 active:scale-95 transition-transform"
           >
             <MessageCircle size={24} strokeWidth={2.5} />
             LINEで無料相談
-          </a>
+          </LineLink>
           <a
             href={`tel:${PHONE}`}
             className="flex items-center justify-center gap-2.5 bg-white/10 border border-white/20 text-white font-bold text-base rounded-2xl py-4 px-8 active:scale-95 transition-transform backdrop-blur-sm"

@@ -26,6 +26,17 @@ export type Venue = {
   isFeatured: boolean;
 };
 
+export type GuideFaq = {
+  question: string;
+  answer: string;
+};
+
+export type CMSImage = {
+  url: string;
+  width: number;
+  height: number;
+};
+
 export type Guide = {
   id: string;
   slug: string;
@@ -33,8 +44,15 @@ export type Guide = {
   excerpt: string;
   content: string;
   category: string;
+  categoryId?: string;
   publishedAt: string;
   readingTime: number;
+  faq?: GuideFaq[];
+  // CMS fields (optional — static data does not have these)
+  eyecatch?: CMSImage;
+  seoTitle?: string;
+  seoDescription?: string;
+  ogImage?: CMSImage;
 };
 
 export type SearchParams = {

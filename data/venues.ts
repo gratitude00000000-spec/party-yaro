@@ -82,7 +82,7 @@ export const venues: Venue[] = [
         answer: 'コース料理・飲み放題・会場費・音響照明設備の使用料が含まれます。',
       },
     ],
-    isFeatured: true,
+    isFeatured: false,
   },
   {
     id: '3',
@@ -120,7 +120,7 @@ export const venues: Venue[] = [
         answer: '最大午前3時まで対応可能です（別途深夜料金が発生します）。',
       },
     ],
-    isFeatured: true,
+    isFeatured: false,
   },
   {
     id: '4',
@@ -190,7 +190,7 @@ export const venues: Venue[] = [
         answer: '室内フロアと合わせてご利用いただけます。天候に合わせた柔軟なご提案も可能です。',
       },
     ],
-    isFeatured: true,
+    isFeatured: false,
   },
   {
     id: '6',
@@ -261,7 +261,7 @@ export const venues: Venue[] = [
         answer: '専用駐車場を100台分ご用意しています。大人数の来場にも安心です。',
       },
     ],
-    isFeatured: true,
+    isFeatured: false,
   },
   {
     id: '8',

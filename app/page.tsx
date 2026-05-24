@@ -2,9 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { MessageCircle, Search, ChevronRight, Star, CheckCircle, ArrowRight } from 'lucide-react';
 import { getFeaturedVenues } from '@/data/venues';
-import { LINE_URL, PHONE } from '@/data/venues';
+import { PHONE } from '@/data/venues';
 import VenueCard from '@/components/VenueCard';
 import LineBanner from '@/components/LineBanner';
+import LineLink from '@/components/LineLink';
 import FaqAccordion from '@/components/FaqAccordion';
 
 const popularTags = [
@@ -61,55 +62,99 @@ export default function HomePage() {
   return (
     <div className="page-container">
       {/* Hero */}
-      <section className="relative gradient-hero min-h-[80vh] flex flex-col justify-end pb-10 px-5 overflow-hidden">
+      <section className="relative gradient-hero min-h-[80vh] flex flex-col pb-10 px-5 overflow-hidden">
         {/* Background texture */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-40 h-40 rounded-full bg-primary blur-3xl" />
           <div className="absolute bottom-20 right-5 w-60 h-60 rounded-full bg-red-800 blur-3xl" />
         </div>
 
-        {/* Logo / Brand */}
-        <div className="absolute top-8 left-0 right-0 flex justify-center">
-          <div className="text-center">
-            <div className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-2">
-              <Star size={12} className="text-yellow-400 fill-yellow-400" />
-              <span className="text-white text-xs font-bold">イベント案内実績 618件</span>
-              <Star size={12} className="text-yellow-400 fill-yellow-400" />
-            </div>
-            <h1 className="text-white font-black text-4xl tracking-tight">
-              ぱーてぃー<span className="text-primary">野郎</span>
-            </h1>
+        {/* 上部スペーサー */}
+        <div className="h-[4vh]" />
+
+        {/* Badge + Logo */}
+        <div className="relative z-20 flex flex-col items-center mb-1">
+          <div className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-2">
+            <Star size={12} className="text-yellow-400 fill-yellow-400" />
+            <span className="text-white text-xs font-bold">
+              イベント案内実績 <span className="font-outfit font-bold text-sm">618</span>件
+            </span>
+            <Star size={12} className="text-yellow-400 fill-yellow-400" />
           </div>
+          <h1 className="m-0 leading-none">
+            <Image
+              src="/logo.png"
+              alt="ぱーてぃー野郎"
+              width={1199}
+              height={499}
+              className="mx-auto block w-[240px] h-auto"
+              priority
+            />
+          </h1>
+        </div>
+
+        {/* キャラクター（セクション全体を基準・右側・CTA直上まで） */}
+        <div className="absolute right-[-70px] bottom-[168px] w-[320px] sm:w-[360px] pointer-events-none select-none z-10">
+          <Image
+            src="/py-character-pin.png"
+            alt=""
+            width={200}
+            height={320}
+            className="w-full h-auto object-contain object-bottom"
+            priority
+          />
         </div>
 
         {/* Copy */}
-        <div className="relative z-10 mb-8">
-          <p className="text-white/70 text-sm font-medium mb-2">
-            沖縄の二次会・貸切パーティー会場探しなら
+        <div className="relative z-20 mb-3">
+          <p className="text-yellow-400 text-base font-black tracking-wider mb-2 animate-glow-pulse">
+            沖縄県最大級。
           </p>
-          <h2 className="text-white font-black text-2xl sm:text-3xl leading-tight text-balance mb-3">
-            あなたの理想のパーティーを
-            <br />
-            <span className="text-primary">無料</span>でご提案します
-          </h2>
-          <p className="text-gray-300 text-sm leading-relaxed">
-            結婚式二次会・忘年会・歓送迎会・イベント会場
-            <br />
-            相談・紹介・内覧手配すべて完全無料
+          {/* タイトル上下ライン */}
+          <div className="relative py-2 mb-3">
+            <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: 'linear-gradient(90deg, rgba(251,191,36,0.9) 0%, rgba(255,255,255,0.25) 55%, transparent 100%)' }} />
+            <h2 className="animate-heading-shimmer text-4xl sm:text-5xl"
+                style={{ fontFamily: 'var(--font-dela)', lineHeight: 1.25 }}>
+              {/* 行1: 貸切パーティー会場 */}
+              <span style={{ display: 'block' }}>
+                {['貸','切'].map((c, i) => (
+                  <span key={c+i} className="inline-block" style={{ color: '#fff', textShadow: '0 0 16px rgba(255,255,255,0.8)', animation: `slideInRight 0.4s ease-out ${i * 0.09}s forwards`, opacity: 0 }}>{c}</span>
+                ))}
+                <span className="animate-party-glow" style={{ display: 'inline' }}>
+                  {['パ','ー','テ','ィ','ー'].map((c, i) => (
+                    <span key={c+i} className="inline-block" style={{ color: '#FFE04B', animation: `slideInRight 0.4s ease-out ${(2 + i) * 0.09}s forwards`, opacity: 0 }}>{c}</span>
+                  ))}
+                </span>
+                {['会','場'].map((c, i) => (
+                  <span key={c+i} className="inline-block" style={{ color: '#fff', textShadow: '0 0 16px rgba(255,255,255,0.8)', animation: `slideInRight 0.4s ease-out ${(7 + i) * 0.09}s forwards`, opacity: 0 }}>{c}</span>
+                ))}
+              </span>
+              {/* 行2: 専門サイト */}
+              <span style={{ display: 'block' }}>
+                {['専','門','サ','イ','ト'].map((c, i) => (
+                  <span key={c+i} className="inline-block" style={{ color: '#fff', textShadow: '0 0 16px rgba(255,255,255,0.8)', animation: `slideInRight 0.4s ease-out ${(9 + i) * 0.09}s forwards`, opacity: 0 }}>{c}</span>
+                ))}
+              </span>
+            </h2>
+            <div className="absolute bottom-0 left-0 w-[230px] h-[2px]" style={{ background: 'linear-gradient(90deg, rgba(251,191,36,0.9) 0%, rgba(255,255,255,0.25) 70%, transparent 100%)' }} />
+          </div>
+          <p className="text-gray-200 text-[15px] leading-relaxed pr-[155px] sm:pr-[200px]">
+            沖縄最大級の掲載数。<br />幹事の悩みを<br /><span className="text-white font-black">無料</span>で解決します。
           </p>
         </div>
 
+        {/* フレキシブルスペーサー（CTA を下に押す） */}
+        <div className="flex-1 min-h-[16px]" />
+
         {/* CTA buttons */}
-        <div className="relative z-10 flex flex-col gap-3">
-          <a
-            href={LINE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="relative z-20 flex flex-col gap-3">
+          <LineLink
+            location="hero"
             className="flex items-center justify-center gap-3 bg-[#06C755] text-white font-black text-lg rounded-2xl py-4 shadow-xl shadow-green-900/50 active:scale-95 transition-transform"
           >
             <MessageCircle size={22} strokeWidth={2.5} />
             LINEで無料相談する
-          </a>
+          </LineLink>
           <Link
             href="/search"
             className="flex items-center justify-center gap-3 bg-white/15 border border-white/30 text-white font-bold text-base rounded-2xl py-4 backdrop-blur-sm active:scale-95 transition-transform"
@@ -152,7 +197,7 @@ export default function HomePage() {
         </div>
 
         <div className="space-y-4">
-          {featuredVenues.slice(0, 4).map((venue) => (
+          {featuredVenues.map((venue) => (
             <VenueCard key={venue.id} venue={venue} />
           ))}
         </div>
@@ -177,7 +222,7 @@ export default function HomePage() {
           {steps.map((step, i) => (
             <div key={step.no} className="flex gap-4">
               <div className="flex flex-col items-center">
-                <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-black text-sm shrink-0">
+                <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bebas text-xl shrink-0 tracking-wide">
                   {step.no}
                 </div>
                 {i < steps.length - 1 && (
@@ -236,15 +281,13 @@ export default function HomePage() {
           <h2 className="text-white font-black text-xl mb-4">
             会場選びに迷ったら<br />まずはLINEへ
           </h2>
-          <a
-            href={LINE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <LineLink
+            location="final_cta"
             className="w-full flex items-center justify-center gap-3 bg-[#06C755] text-white font-black text-lg rounded-2xl py-4 shadow-lg shadow-green-900/40 active:scale-95 transition-transform mb-3"
           >
             <MessageCircle size={22} />
             LINEで無料相談
-          </a>
+          </LineLink>
           <a
             href={`tel:${PHONE}`}
             className="text-gray-400 text-sm font-medium"

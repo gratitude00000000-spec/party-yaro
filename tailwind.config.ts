@@ -34,7 +34,13 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-noto)', 'Noto Sans JP', 'sans-serif'],
+        // Outfit covers Latin/ASCII → auto-applies to English & numbers
+        // Japanese chars fall through to Noto Sans JP
+        sans: ['var(--font-outfit)', 'var(--font-noto)', 'Noto Sans JP', 'sans-serif'],
+        noto: ['var(--font-noto)', 'Noto Sans JP', 'sans-serif'],
+        outfit: ['var(--font-outfit)', 'sans-serif'],
+        bebas: ['var(--font-bebas)', 'sans-serif'],
+        dela: ['var(--font-dela)', 'sans-serif'],
       },
       backgroundImage: {
         'hero-gradient': 'linear-gradient(135deg, #1A1A1A 0%, #3D0009 100%)',

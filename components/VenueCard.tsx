@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { MapPin, Users, MessageCircle, ChevronRight } from 'lucide-react';
 import type { Venue } from '@/lib/types';
+import BookmarkButton from '@/components/BookmarkButton';
 
 type Props = {
   venue: Venue;
@@ -30,10 +31,15 @@ export default function VenueCard({ venue, compact = false }: Props) {
           </span>
 
           {/* Capacity badge */}
-          <span className="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+          <span className="absolute top-3 right-12 bg-primary text-white text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
             <Users size={10} />
             {venue.capacityMin}〜{venue.capacityMax}名
           </span>
+
+          {/* Bookmark */}
+          <div className="absolute top-2.5 right-2.5">
+            <BookmarkButton venueId={venue.id} />
+          </div>
 
           {/* Venue name overlay */}
           <div className="absolute bottom-3 left-3 right-3">

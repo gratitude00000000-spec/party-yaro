@@ -5,9 +5,9 @@ import { Filter, X } from 'lucide-react';
 import VenueCard from '@/components/VenueCard';
 import type { Venue } from '@/lib/types';
 
-const AREAS = ['すべて', '那覇', '国際通り', '北谷', '宜野湾', '浦添', '沖縄市'];
-const SCENES = ['すべて', '結婚式二次会', '忘年会', '新年会', '歓送迎会', '同窓会', '会社イベント', 'DJイベント'];
-const FACILITIES = ['すべて', '貸切OK', '飲み放題', 'プロジェクター', '音響', 'カラオケ', '駐車場', '深夜OK'];
+const AREAS = ['すべて', '那覇', '国際通り', '北谷', '沖縄市'];
+const SCENES = ['すべて', '結婚式二次会', '忘年会', '新年会', '歓送迎会', '同窓会', '会社イベント', 'DJイベント', 'その他イベント'];
+const FACILITIES = ['すべて', '貸切OK', '飲み放題', 'プロジェクター', '音響', 'カラオケ', 'アミューズメント'];
 
 type Props = {
   venues: Venue[];
