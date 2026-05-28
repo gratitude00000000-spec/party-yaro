@@ -50,7 +50,7 @@ export default function VenueDetailPage({ params }: Props) {
     },
     telephone: venue.phone,
     maximumAttendeeCapacity: venue.capacityMax,
-    url: `https://www.party-yaro.com/venues/${venue.slug}`,
+    url: `https://www.okinawa-party-yarou.com/venues/${venue.slug}`,
     image: venue.images,
   };
 

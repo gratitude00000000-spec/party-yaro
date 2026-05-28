@@ -18,7 +18,7 @@ export default function Breadcrumb({ items }: Props) {
       '@type': 'ListItem',
       position: i + 1,
       name: item.label,
-      item: item.href ? `https://www.party-yaro.com${item.href}` : undefined,
+      item: item.href ? `https://www.okinawa-party-yarou.com${item.href}` : undefined,
     })),
   };
 

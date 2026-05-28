@@ -37,7 +37,7 @@ const mplusRounded = Mochiy_Pop_One({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.party-yaro.com'),
+  metadataBase: new URL('https://www.okinawa-party-yarou.com'),
   title: {
     default: 'ぱーてぃー野郎｜沖縄の貸切パーティー会場探し',
     template: '%s | ぱーてぃー野郎',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: 'ぱーてぃー野郎｜沖縄の貸切パーティー会場探し',
     description:
       '沖縄の二次会・貸切パーティー会場を無料でご提案。那覇・北谷・浦添エリア対応。LINE相談・内覧手配無料。',
-    url: 'https://www.party-yaro.com',
+    url: 'https://www.okinawa-party-yarou.com',
     siteName: 'ぱーてぃー野郎',
     locale: 'ja_JP',
     type: 'website',
@@ -116,7 +116,7 @@ const organizationSchema = {
   name: 'ぱーてぃー野郎',
   description:
     '沖縄県内の二次会・貸切パーティー会場を無料でご提案するサービス。結婚式二次会・忘年会・歓送迎会・イベント会場を幹事の代わりにご提案します。',
-  url: 'https://www.party-yaro.com',
+  url: 'https://www.okinawa-party-yarou.com',
   telephone: '098-975-5682',
   address: {
     '@type': 'PostalAddress',
