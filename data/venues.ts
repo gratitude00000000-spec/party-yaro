@@ -264,6 +264,52 @@ export const venues: Venue[] = [
     isFeatured: false,
   },
   {
+    id: '9',
+    name: 'PARTYSPACE NEXT',
+    slug: 'partyspace-next',
+    area: '国際通り',
+    address: '沖縄県那覇市牧志（沖映通り沿い）',
+    capacityMin: 30,
+    capacityMax: 150,
+    priceText: '¥3,500〜 / 1名（飲み放題込）',
+    description:
+      '那覇・国際通りと沖映通りに隣接する大型パーティースペース。最大150名を収容できる広々とした空間で、結婚式二次会から企業イベント・DJパーティーまで幅広いシーンに対応。プロジェクター・大型スクリーン・プロ音響・カラオケを完備し、深夜まで賑やかなパーティーをお楽しみいただけます。那覇随一のアクセスで、遠方からのゲストにも最適な立地です。',
+    images: [
+      'https://picsum.photos/seed/partyspace-next-1/800/600',
+      'https://picsum.photos/seed/partyspace-next-2/800/600',
+      'https://picsum.photos/seed/partyspace-next-3/800/600',
+      'https://picsum.photos/seed/partyspace-next-4/800/600',
+    ],
+    tags: ['100名以上', '結婚式二次会', '貸切OK', '国際通り', 'DJイベント'],
+    facilities: ['貸切OK', '飲み放題', 'プロジェクター', '音響', 'カラオケ', '深夜OK'],
+    scenes: ['結婚式二次会', '歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント', 'DJイベント'],
+    access: 'ゆいレール「牧志駅」より徒歩5分 / 国際通り・沖映通りすぐ',
+    mapUrl: 'https://maps.google.com/?q=那覇市牧志+沖映通り',
+    lineUrl: LINE_URL,
+    phone: PHONE,
+    recommendedPoint:
+      '観光客にも地元の方にも馴染み深い国際通り・沖映通りに位置する那覇最大級のパーティースペース。100名以上の大人数にも余裕で対応し、結婚式二次会・忘年会・歓送迎会・DJイベントまでどんなシーンもワンストップでサポート。プロ仕様の音響・照明・大型スクリーンが揃い、深夜営業にも対応しているので、盛り上がりを最後まで続けられます。',
+    faq: [
+      {
+        question: '100名以上の大人数でも対応できますか？',
+        answer: 'はい、最大150名まで対応可能です。大規模な結婚式二次会や企業イベントも専任スタッフが丁寧にサポートします。',
+      },
+      {
+        question: '国際通りからすぐ来られますか？',
+        answer: 'はい、国際通り・沖映通りからすぐの場所にあります。ゆいレール牧志駅からも徒歩5分とアクセス抜群です。',
+      },
+      {
+        question: '深夜まで利用できますか？',
+        answer: 'はい、深夜営業に対応しています。詳細な終了時間はLINEまたはお電話でご確認ください。',
+      },
+      {
+        question: 'DJブースや音響設備はありますか？',
+        answer: 'プロ仕様の音響システムとDJブースを完備しています。外部DJの持ち込みも可能です。',
+      },
+    ],
+    isFeatured: true,
+  },
+  {
     id: '8',
     name: 'SUNSET LOUNGE 北谷',
     slug: 'sunset-lounge-chatan',
