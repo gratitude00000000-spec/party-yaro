@@ -305,6 +305,7 @@ export const venues: Venue[] = [
       },
     ],
     isFeatured: true,
+    instagramUrl: 'https://www.instagram.com/partyspacenext_okinawa/',
   },
   {
     id: '8',

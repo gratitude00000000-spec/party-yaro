@@ -24,6 +24,7 @@ export type Venue = {
   recommendedPoint: string;
   faq: VenueFaq[];
   isFeatured: boolean;
+  instagramUrl?: string;
 };
 
 export type GuideFaq = {

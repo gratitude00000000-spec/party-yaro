@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import {
-  MapPin, Users, Phone, MessageCircle, Check, ChevronRight, Star,
+  MapPin, Users, Phone, MessageCircle, Check, ChevronRight, Star, Instagram,
 } from 'lucide-react';
 import { getVenueBySlug, venues, LINE_URL, PHONE } from '@/data/venues';
 import PhotoSlider from '@/components/PhotoSlider';
@@ -155,18 +155,34 @@ export default function VenueDetailPage({ params }: Props) {
             <p className="text-sm text-gray-600">{venue.access}</p>
           </div>
         </div>
-        {venue.mapUrl && (
-          <a
-            href={venue.mapUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-3 flex items-center justify-center gap-2 border border-gray-200 text-gray-700 font-bold text-sm rounded-xl py-2.5"
-          >
-            <MapPin size={14} />
-            Googleマップで見る
-            <ChevronRight size={14} />
-          </a>
-        )}
+        <div className="mt-3 flex flex-col gap-2">
+          {venue.mapUrl && (
+            <a
+              href={venue.mapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 border border-gray-200 text-gray-700 font-bold text-sm rounded-xl py-2.5"
+            >
+              <MapPin size={14} />
+              Googleマップで見る
+              <ChevronRight size={14} />
+            </a>
+          )}
+          {venue.instagramUrl && (
+            <a
+              href={venue.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 rounded-xl py-2.5 font-bold text-sm text-white active:scale-95 transition-transform"
+              style={{
+                background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
+              }}
+            >
+              <Instagram size={16} />
+              Instagramをフォローする
+            </a>
+          )}
+        </div>
       </div>
 
       {/* FAQ */}
