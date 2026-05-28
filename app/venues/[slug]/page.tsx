@@ -155,6 +155,19 @@ export default function VenueDetailPage({ params }: Props) {
             <p className="text-sm text-gray-600">{venue.access}</p>
           </div>
         </div>
+        {venue.mapEmbedUrl && (
+          <div className="mt-3 rounded-xl overflow-hidden border border-gray-200">
+            <iframe
+              src={venue.mapEmbedUrl}
+              width="100%"
+              height="220"
+              style={{ border: 0, display: 'block' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        )}
         <div className="mt-3 flex flex-col gap-2">
           {venue.mapUrl && (
             <a

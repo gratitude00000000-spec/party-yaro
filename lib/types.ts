@@ -25,6 +25,7 @@ export type Venue = {
   faq: VenueFaq[];
   isFeatured: boolean;
   instagramUrl?: string;
+  mapEmbedUrl?: string;
 };
 
 export type GuideFaq = {

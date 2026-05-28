@@ -306,6 +306,7 @@ export const venues: Venue[] = [
     ],
     isFeatured: true,
     instagramUrl: 'https://www.instagram.com/partyspacenext_okinawa/',
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.304473184186!2d127.68551409999999!3d26.2192947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e569a1ab33fa45%3A0xdf525a657735f1f4!2sPOLEDANCE%26PARTYSPACE%20NEXT!5e0!3m2!1sja!2sjp!4v1779955396537!5m2!1sja!2sjp',
   },
   {
     id: '8',
