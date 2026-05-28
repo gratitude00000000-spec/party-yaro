@@ -179,7 +179,7 @@ export default function VenueDetailPage({ params }: Props) {
               }}
             >
               <Instagram size={16} />
-              Instagramをフォローする
+              Instagram
             </a>
           )}
         </div>
