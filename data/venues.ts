@@ -17,11 +17,7 @@ export const venues: Venue[] = [
     description:
       '那覇・安里に構える沖縄の雰囲気たっぷりの貸切パーティー会場。琉球の文化と空気感を感じられる空間で、本格ステージを完備。カラオケ・ダーツ・音響設備が揃い、二次会から歓送迎会・同窓会まで沖縄らしいひとときをお楽しみいただけます。',
     images: [
-      '/venues/yuimaru-naha-1.jpg',
-      '/venues/yuimaru-naha-2.jpg',
-      '/venues/yuimaru-naha-3.jpg',
-      '/venues/yuimaru-naha-4.jpg',
-      '/venues/yuimaru-naha-5.jpg',
+      '/venues/yuimaru-naha-1.png',
     ],
     tags: ['結婚式二次会', '貸切OK', '沖縄らしさ', 'ステージあり'],
     facilities: ['貸切OK', '飲み放題', '音響', 'カラオケ', '深夜OK'],
