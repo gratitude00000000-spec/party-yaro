@@ -6,6 +6,46 @@ export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
 
 export const venues: Venue[] = [
   {
+    id: '13',
+    name: 'Over Alls',
+    slug: 'overalls-naha',
+    area: '那覇',
+    address: '沖縄県那覇市牧志2丁目21-21番地',
+    capacityMin: 20,
+    capacityMax: 50,
+    priceText: '¥3,000〜 / 1名（飲み放題込）',
+    description:
+      '那覇・牧志の国際通りそばに佇む明るくカジュアルな洋風ダイニングバー。温かみのある木のインテリアとアメリカンポップな内装が心地よい空間を演出。20名の小規模から最大50名（立食80名）まで対応できる貸切会場として、歓送迎会・忘年会・誕生日会などあらゆるパーティーシーンに対応します。',
+    images: [
+      '/venues/overalls-naha-1.png',
+    ],
+    tags: ['貸切OK', '那覇', '飲み放題', '国際通り'],
+    facilities: ['貸切OK', '飲み放題', '音響', 'カラオケ', '深夜OK'],
+    scenes: ['結婚式二次会', '歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント', 'DJイベント'],
+    access: 'ゆいレール「牧志駅」より徒歩3分 / 国際通りから徒歩2分',
+    mapUrl: 'https://maps.google.com/?q=那覇市牧志2-21-21',
+    lineUrl: LINE_URL,
+    phone: PHONE,
+    recommendedPoint:
+      '国際通りから徒歩2分の抜群のアクセスを誇るカジュアルダイニング。明るく開放的な空間で、少人数の歓送迎会から大人数の忘年会まで柔軟に対応。飲み放題プランが充実しており、気軽に楽しめるパーティー会場として人気です。',
+    faq: [
+      {
+        question: '少人数でも貸切できますか？',
+        answer: '20名様からご利用いただけます。少人数のアットホームなパーティーから大人数の宴会まで、ぱーてぃー野郎スタッフが最適なプランをご提案します。',
+      },
+      {
+        question: '料理の持ち込みはできますか？',
+        answer: 'ケーキの持ち込みは無料で承っています。その他のお持ち込みはお気軽にLINEまたはお電話でご相談ください。',
+      },
+      {
+        question: '二次会の幹事サポートはありますか？',
+        answer: 'ぱーてぃー野郎の専任スタッフが、会場選びから当日の進行まで無料でサポートします。お気軽にLINEでご相談ください。',
+      },
+    ],
+    isFeatured: false,
+    instagramUrl: 'https://www.instagram.com/overalls0502/',
+  },
+  {
     id: '12',
     name: 'Black Berry',
     slug: 'blackberry-naha',
