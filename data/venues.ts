@@ -6,6 +6,46 @@ export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
 
 export const venues: Venue[] = [
   {
+    id: '12',
+    name: 'Black Berry',
+    slug: 'blackberry-naha',
+    area: '那覇',
+    address: '沖縄県那覇市久茂地2丁目4-17 マルユウビル4F',
+    capacityMin: 30,
+    capacityMax: 60,
+    priceText: '¥3,000〜 / 1名（飲み放題込）',
+    description:
+      '那覇・久茂地に佇むディスコライクなMusicBar。カラフルな照明と重厚な音響がパーティーを非日常空間へと演出。貸切専用設定でプライベート感たっぷりの二次会・イベントを楽しめます。深夜まで賑やかに盛り上がれる那覇随一のMusic Bar会場です。',
+    images: [
+      '/venues/blackberry-naha-1.png',
+    ],
+    tags: ['貸切OK', '那覇', '深夜OK', 'DJイベント', '音響'],
+    facilities: ['貸切OK', '飲み放題', 'プロジェクター', '音響', '深夜OK'],
+    scenes: ['結婚式二次会', '歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント', 'DJイベント'],
+    access: 'ゆいレール「県庁前駅」より徒歩5分 / 国際通りすぐ / 久茂地交差点そば',
+    mapUrl: 'https://maps.google.com/?q=那覇市久茂地2-4-17+マルユウビル',
+    lineUrl: LINE_URL,
+    phone: PHONE,
+    recommendedPoint:
+      'ディスコのような非日常空間が魅力のMusic Bar。プロ仕様の音響・照明設備で、DJイベントから結婚式二次会まで幅広く対応。那覇・県庁前エリアの好立地で深夜まで営業しており、盛り上がりを最後まで楽しめます。',
+    faq: [
+      {
+        question: 'DJの持ち込みや音楽のリクエストはできますか？',
+        answer: 'はい、外部DJの持ち込みも可能です。プロ仕様の音響設備をそのままご利用いただけます。リクエスト等はLINEまたはお電話でご相談ください。',
+      },
+      {
+        question: '深夜まで利用できますか？',
+        answer: 'はい、深夜営業に対応しています。二次会の二次会としてもご利用いただける深夜対応会場です。詳細な終了時間はお問い合わせください。',
+      },
+      {
+        question: '二次会の幹事サポートはありますか？',
+        answer: 'ぱーてぃー野郎の専任スタッフが、会場選びから当日の流れまで無料でサポートします。お気軽にLINEでご相談ください。',
+      },
+    ],
+    isFeatured: false,
+    instagramUrl: 'https://www.instagram.com/musicbar___blackberry/',
+  },
+  {
     id: '11',
     name: 'ゆいまーる',
     slug: 'yuimaru-naha',
