@@ -28,7 +28,7 @@ export default function PhotoSlider({ images, name }: Props) {
         onScroll={handleScroll}
       >
         {images.map((src, i) => (
-          <div key={src} className="photo-slide relative h-72 sm:h-96">
+          <div key={src} className="photo-slide relative aspect-video">
             <Image
               src={src}
               alt={`${name} 写真${i + 1}`}
