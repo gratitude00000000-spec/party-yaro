@@ -6,6 +6,49 @@ export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
 
 export const venues: Venue[] = [
   {
+    id: '11',
+    name: 'ゆいまーる',
+    slug: 'yuimaru-naha',
+    area: '那覇',
+    address: '沖縄県那覇市安里1丁目1番60号 大光不動産ビル5F',
+    capacityMin: 20,
+    capacityMax: 60,
+    priceText: '¥3,300〜 / 1名（飲み放題込）',
+    description:
+      '那覇・安里に構える沖縄の雰囲気たっぷりの貸切パーティー会場。琉球の文化と空気感を感じられる空間で、本格ステージを完備。カラオケ・ダーツ・音響設備が揃い、二次会から歓送迎会・同窓会まで沖縄らしいひとときをお楽しみいただけます。',
+    images: [
+      '/venues/yuimaru-naha-1.jpg',
+      '/venues/yuimaru-naha-2.jpg',
+      '/venues/yuimaru-naha-3.jpg',
+      '/venues/yuimaru-naha-4.jpg',
+      '/venues/yuimaru-naha-5.jpg',
+    ],
+    tags: ['結婚式二次会', '貸切OK', '沖縄らしさ', 'ステージあり'],
+    facilities: ['貸切OK', '飲み放題', '音響', 'カラオケ', '深夜OK'],
+    scenes: ['結婚式二次会', '歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント', 'DJイベント'],
+    access: 'ゆいレール「安里駅」より徒歩3分 / 国際通りから徒歩5分圏内',
+    mapUrl: 'https://maps.google.com/?q=那覇市安里1-1-60+大光不動産ビル',
+    lineUrl: LINE_URL,
+    phone: PHONE,
+    recommendedPoint:
+      '沖縄らしい雰囲気を味わえる那覇・安里の完全貸切会場。本格ステージを備えており、余興や生演奏など盛りだくさんの演出が可能。ゆいレール安里駅から徒歩3分・国際通りも徒歩圏内でアクセス抜群。カラオケ・ダーツ・音響完備で、最大60名（立食100名）まで対応します。',
+    faq: [
+      {
+        question: 'ステージはどのように使えますか？',
+        answer: '余興・生演奏・DJ・ダンスパフォーマンスなど自由にご利用いただけます。マイクや音響設備も完備していますのでお気軽にご相談ください。',
+      },
+      {
+        question: '最大何名まで対応できますか？',
+        answer: '着席60名・立食100名まで対応可能です。ぱーてぃー野郎スタッフが人数に合わせたレイアウトをご提案します。',
+      },
+      {
+        question: '二次会の幹事サポートはありますか？',
+        answer: 'ぱーてぃー野郎の専任スタッフが、会場選びから当日の流れまで無料でサポートします。',
+      },
+    ],
+    isFeatured: false,
+  },
+  {
     id: '9',
     name: 'PARTYSPACE NEXT',
     slug: 'partyspace-next',
