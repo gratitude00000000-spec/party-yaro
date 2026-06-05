@@ -6,85 +6,6 @@ export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
 
 export const venues: Venue[] = [
   {
-    id: '1',
-    name: 'OPUS NAHA',
-    slug: 'opus-naha',
-    area: '那覇',
-    address: '沖縄県那覇市久茂地2-1-XX',
-    capacityMin: 20,
-    capacityMax: 80,
-    priceText: '¥3,500〜 / 1名（飲み放題込）',
-    description:
-      '那覇の中心部に位置するモダンラウンジ。スタイリッシュな空間で、結婚式二次会から歓送迎会まで幅広いシーンに対応。プロのスタッフが当日の進行もサポートします。',
-    images: [
-      'https://picsum.photos/seed/opus-naha-1/800/600',
-      'https://picsum.photos/seed/opus-naha-2/800/600',
-      'https://picsum.photos/seed/opus-naha-3/800/600',
-      'https://picsum.photos/seed/opus-naha-4/800/600',
-    ],
-    tags: ['結婚式二次会', '歓送迎会', '貸切OK'],
-    facilities: ['貸切OK', '飲み放題', 'プロジェクター', '音響', '駐車場'],
-    scenes: ['結婚式二次会', '歓送迎会', '忘年会', '同窓会'],
-    access: '沖縄都市モノレール「県庁前駅」より徒歩5分',
-    mapUrl: 'https://maps.google.com/?q=那覇市久茂地',
-    lineUrl: LINE_URL,
-    phone: PHONE,
-    recommendedPoint:
-      '那覇中心部でアクセス抜群。広々としたフロアで最大80名まで対応。プロジェクターと音響が完備されているので、余興や映像演出も自由自在です。',
-    faq: [
-      {
-        question: '会場の下見はできますか？',
-        answer: 'はい、事前の下見は無料で受け付けています。LINEまたはお電話でご予約ください。',
-      },
-      {
-        question: '料理の持ち込みは可能ですか？',
-        answer: 'ケーキの持ち込みは無料です。その他のお持ち込みについてはお問い合わせください。',
-      },
-      {
-        question: '二次会の幹事サポートはありますか？',
-        answer: 'ぱーてぃー野郎の専任スタッフが、会場選びから当日の流れまで無料でサポートします。',
-      },
-    ],
-    isFeatured: true,
-  },
-  {
-    id: '2',
-    name: 'THE LUXE 国際通り',
-    slug: 'the-luxe-kokusai',
-    area: '国際通り',
-    address: '沖縄県那覇市牧志1-3-XX',
-    capacityMin: 30,
-    capacityMax: 100,
-    priceText: '¥4,000〜 / 1名（コース料理＋飲み放題）',
-    description:
-      '国際通り至近の上質なパーティースペース。洗練されたインテリアと本格フードで、特別な夜を演出します。大型スクリーンでの映像演出にも対応。',
-    images: [
-      'https://picsum.photos/seed/luxe-kokusai-1/800/600',
-      'https://picsum.photos/seed/luxe-kokusai-2/800/600',
-      'https://picsum.photos/seed/luxe-kokusai-3/800/600',
-    ],
-    tags: ['結婚式二次会', '会社イベント', '飲み放題'],
-    facilities: ['貸切OK', '飲み放題', 'プロジェクター', '音響', 'カラオケ'],
-    scenes: ['結婚式二次会', '会社イベント', '忘年会', '新年会'],
-    access: '沖縄都市モノレール「牧志駅」より徒歩3分',
-    mapUrl: 'https://maps.google.com/?q=那覇市牧志',
-    lineUrl: LINE_URL,
-    phone: PHONE,
-    recommendedPoint:
-      '観光客にも地元の方にも人気の国際通りエリア。最大100名まで対応可能な広さで、結婚式二次会にも最適。当日の司会進行サービスもご用意しています。',
-    faq: [
-      {
-        question: 'カラオケ設備はありますか？',
-        answer: 'はい、最新カラオケシステムを完備しています。パーティーの盛り上げに最適です。',
-      },
-      {
-        question: '料金に何が含まれますか？',
-        answer: 'コース料理・飲み放題・会場費・音響照明設備の使用料が含まれます。',
-      },
-    ],
-    isFeatured: false,
-  },
-  {
     id: '3',
     name: 'BLUE CREST 北谷',
     slug: 'blue-crest-chatan',
@@ -188,39 +109,6 @@ export const venues: Venue[] = [
       {
         question: 'ガーデンテラスはどのように利用できますか？',
         answer: '室内フロアと合わせてご利用いただけます。天候に合わせた柔軟なご提案も可能です。',
-      },
-    ],
-    isFeatured: false,
-  },
-  {
-    id: '6',
-    name: 'SONIC BEAT 沖縄市',
-    slug: 'sonic-beat-okinawa',
-    area: '沖縄市',
-    address: '沖縄県沖縄市中央XX-XX',
-    capacityMin: 30,
-    capacityMax: 80,
-    priceText: '¥3,000〜 / 1名（飲み放題込）',
-    description:
-      '音楽とパーティーを愛する人のための会場。本格的なDJシステムと生演奏にも対応したステージを完備。音楽好きが集まるイベントに最適なスペースです。',
-    images: [
-      'https://picsum.photos/seed/sonic-beat-1/800/600',
-      'https://picsum.photos/seed/sonic-beat-2/800/600',
-      'https://picsum.photos/seed/sonic-beat-3/800/600',
-    ],
-    tags: ['DJイベント', '音響', '貸切OK', '深夜OK'],
-    facilities: ['貸切OK', '飲み放題', '音響', 'カラオケ', '深夜OK'],
-    scenes: ['DJイベント', '会社イベント', '歓送迎会', '忘年会'],
-    access: '沖縄市コザ・ミュージックタウンより徒歩10分',
-    mapUrl: 'https://maps.google.com/?q=沖縄市中央',
-    lineUrl: LINE_URL,
-    phone: PHONE,
-    recommendedPoint:
-      '音楽の街・沖縄市（コザ）の中心部にある本格音楽対応会場。プロ仕様のPAシステムで生演奏にも対応。DJイベントや音楽系パーティーには最高の環境です。',
-    faq: [
-      {
-        question: '生演奏は可能ですか？',
-        answer: 'はい、プロ仕様の音響システムで生演奏にも対応しています。事前にご相談ください。',
       },
     ],
     isFeatured: false,
