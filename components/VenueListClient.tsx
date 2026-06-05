@@ -189,9 +189,9 @@ export default function VenueListClient({ venues, initialArea, initialScene, ini
       )}
 
       {/* Venue grid */}
-      <div className="px-4 py-4 space-y-4">
+      <div className="px-4 py-4 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
         {filtered.length === 0 ? (
-          <div className="text-center py-16">
+          <div className="col-span-full text-center py-16">
             <p className="text-4xl mb-3">🎉</p>
             <p className="font-bold text-gray-700 mb-1">条件に合う会場が見つかりませんでした</p>
             <p className="text-sm text-gray-500 mb-4">条件を変えて再検索するか、LINEでご相談ください</p>
