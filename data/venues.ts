@@ -6,6 +6,47 @@ export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
 
 export const venues: Venue[] = [
   {
+    id: '14',
+    name: 'Hash tag',
+    slug: 'hashtag-kokusai',
+    area: '国際通り',
+    address: '沖縄県那覇市牧志3丁目1-6 勉強堂ビル5F',
+    capacityMin: 30,
+    capacityMax: 120,
+    priceText: '¥3,000〜 / 1名（飲み放題込）',
+    description:
+      '国際通り・牧志のビル5Fに広がる大型アミューズメントバー。最大120名を収容できる広々とした空間に、ダーツ・卓球・カラオケ・音響設備が揃い、飲んで遊んで盛り上がれるエンタメ満載の貸切会場です。二次会から忘年会・歓送迎会まであらゆるシーンを盛り上げます。',
+    images: [
+      '/venues/hashtag-kokusai-1.jpg',
+    ],
+    tags: ['100名以上', '貸切OK', '国際通り', 'ダーツ', '深夜OK'],
+    facilities: ['貸切OK', '飲み放題', '音響', 'カラオケ', '深夜OK'],
+    scenes: ['結婚式二次会', '歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント', 'DJイベント'],
+    access: 'ゆいレール「牧志駅」より徒歩5分 / 国際通りから徒歩3分 / 勉強堂ビル5F',
+    mapUrl: 'https://maps.google.com/?q=那覇市牧志3-1-6+勉強堂ビル',
+    lineUrl: LINE_URL,
+    phone: PHONE,
+    recommendedPoint:
+      '国際通りそばで最大120名まで対応できる大型アミューズメントバー。ダーツ・卓球・カラオケと遊びが充実しており、ただ飲むだけじゃないパーティーが楽しめます。深夜まで営業しているので二次会・三次会にも最適な会場です。',
+    faq: [
+      {
+        question: 'ダーツや卓球は自由に使えますか？',
+        answer: 'はい、貸切時間中はダーツ・卓球設備をご自由にお使いいただけます。パーティーの盛り上げアイテムとして大人気です。',
+      },
+      {
+        question: '120名の大人数でも対応できますか？',
+        answer: 'はい、最大120名まで対応可能です。大規模な忘年会や会社イベントもぱーてぃー野郎スタッフが無料でサポートします。',
+      },
+      {
+        question: '二次会の幹事サポートはありますか？',
+        answer: 'ぱーてぃー野郎の専任スタッフが、会場選びから当日の流れまで無料でサポートします。お気軽にLINEでご相談ください。',
+      },
+    ],
+    isFeatured: false,
+    instagramUrl: 'https://www.instagram.com/bar_hash_tag/',
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.3982598360626!2d127.6885622!3d26.2162461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e569dd38877cfd%3A0x7a1d9fd4ad5d56b3!2zQkFSIOODj-ODg-OCt-ODpeOCv-OCsCDjgqLjg5_jg6Xjg7zjgrrjg6Hjg7Pjg4gm44OV44O844OJ44OQ44O8!5e0!3m2!1sja!2sjp!4v1780840553068!5m2!1sja!2sjp',
+  },
+  {
     id: '13',
     name: 'Over Alls',
     slug: 'overalls-naha',
