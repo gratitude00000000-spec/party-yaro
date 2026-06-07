@@ -6,6 +6,47 @@ export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
 
 export const venues: Venue[] = [
   {
+    id: '15',
+    name: 'Music Bar KING',
+    slug: 'musicbar-king-okinawa',
+    area: '沖縄市',
+    address: '沖縄県沖縄市諸見里1丁目1-5 2F',
+    capacityMin: 50,
+    capacityMax: 120,
+    priceText: '¥3,500〜 / 1名（飲み放題込）',
+    description:
+      '沖縄市・コザに構えるスポーツ＆ミュージックバー。全方向に大型モニターを完備し、琉球ゴールデンキングスをイメージしたバスケットボール型シャンデリアが圧倒的な存在感を放つ。カラオケ・ダーツ・ビリヤード・テーブルゲーム20種類以上が無料で楽しめ、会場使用料・保証金も無料。50〜120名の完全貸切に対応します。',
+    images: [
+      '/venues/musicbar-king-okinawa-1.jpg',
+    ],
+    tags: ['100名以上', '貸切OK', '沖縄市', 'DJイベント', '駐車場'],
+    facilities: ['貸切OK', '飲み放題', '音響', 'カラオケ', '駐車場', '深夜OK'],
+    scenes: ['結婚式二次会', '歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント', 'DJイベント'],
+    access: '沖縄自動車道「沖縄北IC」より車で約5分 / 沖縄市諸見里・コザエリア',
+    mapUrl: 'https://maps.google.com/?q=沖縄市諸見里1-1-5',
+    lineUrl: LINE_URL,
+    phone: PHONE,
+    recommendedPoint:
+      '沖縄市コザの大型スポーツ＆ミュージックバー。全方向大型モニター・カラオケ・ダーツ・ビリヤード・テーブルゲーム20種以上が揃い、会場使用料・保証金が無料なのも嬉しいポイント。駐車場完備で車でのアクセスも抜群。50名から120名まで柔軟に対応します。',
+    faq: [
+      {
+        question: 'ダーツやビリヤードは追加料金がかかりますか？',
+        answer: 'ダーツ・ビリヤード・テーブルゲーム20種以上はすべて無料でご利用いただけます。パーティーをさらに盛り上げるアクティビティとしてお楽しみください。',
+      },
+      {
+        question: '会場使用料はかかりますか？',
+        answer: '会場使用料・貸切保証金は無料です。飲み放題プランのみのお支払いとなります。ぱーてぃー野郎スタッフが詳細をご案内します。',
+      },
+      {
+        question: '二次会の幹事サポートはありますか？',
+        answer: 'ぱーてぃー野郎の専任スタッフが、会場選びから当日の流れまで無料でサポートします。お気軽にLINEでご相談ください。',
+      },
+    ],
+    isFeatured: false,
+    instagramUrl: 'https://www.instagram.com/king_musicbar_okinawa/',
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.894057759263!2d127.7948931!3d26.3299298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e51305e91388a9%3A0x634295f45c35e5ec!2sMusic%20Bar%20KING!5e0!3m2!1sja!2sjp!4v1780841224645!5m2!1sja!2sjp',
+  },
+  {
     id: '14',
     name: 'Hash tag',
     slug: 'hashtag-kokusai',
