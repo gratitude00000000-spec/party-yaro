@@ -6,6 +6,46 @@ export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
 
 export const venues: Venue[] = [
   {
+    id: '16',
+    name: 'ENTRANCE',
+    slug: 'entrance-naha',
+    area: '那覇',
+    address: '沖縄県那覇市久茂地3-23-10 よなはビル5F',
+    capacityMin: 50,
+    capacityMax: 120,
+    priceText: '¥3,500〜 / 1名（飲み放題込）',
+    description:
+      '那覇・久茂地のビル5Fに広がるアミューズメントバー。ビリヤード・ダーツ・卓球・テレビゲーム・ボードゲームが揃い、飲んで遊べる完全貸切パーティースペース。ポップアートな内装とブルーネオンの空間で、結婚式二次会からDJイベントまで幅広いシーンを盛り上げます。',
+    images: [
+      '/venues/entrance-naha-1.jpg',
+    ],
+    tags: ['貸切OK', '那覇', '深夜OK', 'ビリヤード', 'ダーツ'],
+    facilities: ['貸切OK', '飲み放題', '音響', '深夜OK'],
+    scenes: ['結婚式二次会', '歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント', 'DJイベント'],
+    access: 'ゆいレール「県庁前駅」より徒歩4分 / 久茂地交差点そば',
+    mapUrl: 'https://maps.google.com/?q=那覇市久茂地3-23-10+よなはビル',
+    lineUrl: LINE_URL,
+    phone: PHONE,
+    recommendedPoint:
+      '那覇・県庁前から徒歩4分の好立地アミューズメントバー。ビリヤード・ダーツ・卓球など遊びが充実しており、最大120名まで対応可能。ポップアートと青いネオンが彩る個性的な空間で、二次会からDJイベントまで記憶に残るパーティーが実現します。',
+    faq: [
+      {
+        question: 'ビリヤードやダーツは無料で使えますか？',
+        answer: 'はい、貸切時間中はビリヤード・ダーツ・卓球などアミューズメント設備を無料でご利用いただけます。パーティーをさらに盛り上げましょう。',
+      },
+      {
+        question: '50名以下の少人数でも貸切できますか？',
+        answer: '50名様からの貸切に対応しています。ご人数やご予算に合わせた最適なプランをぱーてぃー野郎スタッフがご提案します。',
+      },
+      {
+        question: '二次会の幹事サポートはありますか？',
+        answer: 'ぱーてぃー野郎の専任スタッフが、会場選びから当日の流れまで無料でサポートします。お気軽にLINEでご相談ください。',
+      },
+    ],
+    isFeatured: false,
+    instagramUrl: 'https://www.instagram.com/entrance_0301/',
+  },
+  {
     id: '15',
     name: 'Music Bar KING',
     slug: 'musicbar-king-okinawa',
