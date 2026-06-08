@@ -6,6 +6,45 @@ export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
 
 export const venues: Venue[] = [
   {
+    id: '17',
+    name: 'Free Style Bar Relations',
+    slug: 'relations-okinawa',
+    area: '沖縄市',
+    address: '沖縄県沖縄市園田3丁目 メイフラワーホテル1F',
+    capacityMin: 30,
+    capacityMax: 70,
+    priceText: '¥3,000〜 / 1名（飲み放題込）',
+    description:
+      '沖縄市・コザのエンタメ街に位置するフリースタイルバー。ビリヤード・ダーツ・カラオケを完備し、赤を基調としたポップアートな空間が非日常感を演出。120種類のカクテルと豊富なフードメニューも揃い、二次会・三次会から結婚式二次会まで幅広く対応できる沖縄市屈指の大箱バーです。',
+    images: [
+      '/venues/relations-okinawa-1.jpg',
+    ],
+    tags: ['貸切OK', '沖縄市', '深夜OK', 'ダーツ'],
+    facilities: ['貸切OK', '飲み放題', 'プロジェクター', '音響', 'カラオケ', '深夜OK'],
+    scenes: ['結婚式二次会', '歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント', 'DJイベント'],
+    access: '沖縄市園田・コザ中の町エリア / 沖縄自動車道「沖縄南IC」より車で約15分',
+    mapUrl: 'https://maps.google.com/?q=沖縄市園田+Free+Style+Bar+Relations',
+    lineUrl: LINE_URL,
+    phone: PHONE,
+    recommendedPoint:
+      '沖縄市コザの繁華街に佇む個性派フリースタイルバー。ビリヤード・ダーツ・カラオケが揃い、飲んで遊べる空間が魅力。深夜まで営業しているので二次会・三次会にも最適。120種類のカクテルと豊富なフードで、あらゆるパーティーシーンを盛り上げます。',
+    faq: [
+      {
+        question: 'ビリヤードやダーツは貸切中も使えますか？',
+        answer: 'はい、貸切中はビリヤード・ダーツなどアミューズメント設備を自由にご利用いただけます。パーティーの盛り上げにご活用ください。',
+      },
+      {
+        question: '深夜まで利用できますか？',
+        answer: 'はい、深夜営業に対応しています。二次会・三次会として遅い時間からのご利用も大歓迎です。詳細はLINEまたはお電話でご確認ください。',
+      },
+      {
+        question: '二次会の幹事サポートはありますか？',
+        answer: 'ぱーてぃー野郎の専任スタッフが、会場選びから当日の流れまで無料でサポートします。お気軽にLINEでご相談ください。',
+      },
+    ],
+    isFeatured: false,
+  },
+  {
     id: '16',
     name: 'ENTRANCE',
     slug: 'entrance-naha',
