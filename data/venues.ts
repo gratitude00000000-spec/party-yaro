@@ -6,6 +6,45 @@ export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
 
 export const venues: Venue[] = [
   {
+    id: '27',
+    name: 'RED ZONE',
+    slug: 'redzone-uruma',
+    area: '沖縄市',
+    address: 'うるま市・沖縄市エリア',
+    capacityMin: 20,
+    capacityMax: 80,
+    priceText: 'LINEでご相談ください',
+    description:
+      'うるま市に構えるライブハウス系の本格エンタメ会場。「RED ZONE」の文字が輝くダークな空間にミラーボール・大型スクリーン・ステージが揃い、DJイベントから結婚式二次会まで圧倒的な盛り上がりを提供。プロジェクター・カラオケ・ダーツ・音響を完備した、うるま・沖縄市エリア随一のエンタメ貸切会場です。',
+    images: [
+      '/venues/redzone-uruma-1.jpg',
+    ],
+    tags: ['貸切OK', '沖縄市', 'DJイベント', 'ステージあり', '深夜OK'],
+    facilities: ['貸切OK', '飲み放題', 'プロジェクター', '音響', 'カラオケ', '深夜OK'],
+    scenes: ['結婚式二次会', '歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント', 'DJイベント'],
+    access: 'うるま市・沖縄市エリア / 詳細はLINEでご確認ください',
+    mapUrl: 'https://maps.google.com/?q=うるま市+RED+ZONE+bar',
+    lineUrl: LINE_URL,
+    phone: PHONE,
+    recommendedPoint:
+      'ミラーボール・大型スクリーン・ステージ・DJブースが揃うライブハウス系エンタメ会場。ダーツ・カラオケ・プロジェクターも完備し、DJイベントや二次会を最高に盛り上げる環境が整っています。深夜まで楽しめるうるま・沖縄市エリアの個性派会場です。',
+    faq: [
+      {
+        question: 'ステージでパフォーマンスはできますか？',
+        answer: 'はい、ステージを使った余興・DJ・ダンスパフォーマンスが可能です。音響・照明設備も完備していますのでお気軽にご相談ください。',
+      },
+      {
+        question: 'DJイベントとして利用できますか？',
+        answer: 'はい、DJブース・音響・ミラーボール完備でDJイベントにも対応しています。詳細はLINEまたはお電話でご相談ください。',
+      },
+      {
+        question: '二次会の幹事サポートはありますか？',
+        answer: 'ぱーてぃー野郎の専任スタッフが、会場選びから当日の流れまで無料でサポートします。お気軽にLINEでご相談ください。',
+      },
+    ],
+    isFeatured: false,
+  },
+  {
     id: '26',
     name: 'WILD GEESE',
     slug: 'wildgeese-naha',
