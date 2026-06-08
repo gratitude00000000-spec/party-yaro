@@ -6,6 +6,45 @@ export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
 
 export const venues: Venue[] = [
   {
+    id: '23',
+    name: 'CRUSH',
+    slug: 'crush-kumoji',
+    area: '国際通り',
+    address: '沖縄県那覇市久茂地エリア',
+    capacityMin: 13,
+    capacityMax: 24,
+    priceText: '¥2,500〜 / 1名（飲み放題込）',
+    description:
+      '国際通りそばの久茂地に佇む、オレンジの間接照明が印象的なムーディーなバー。長いバーカウンターとダーツを完備した大人の隠れ家空間で、少人数だけの完全プライベートな貸切パーティーが楽しめます。13〜24名限定のコンパクトな会場で、仲間内の特別な集まりに最適です。',
+    images: [
+      '/venues/crush-kumoji-1.jpg',
+    ],
+    tags: ['貸切OK', '国際通り', '深夜OK', 'ダーツ', '隠れ家'],
+    facilities: ['貸切OK', '飲み放題', '音響', '深夜OK'],
+    scenes: ['結婚式二次会', '歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント'],
+    access: '国際通り・久茂地エリア / ゆいレール「県庁前駅」より徒歩圏内',
+    mapUrl: 'https://maps.google.com/?q=那覇市久茂地+CRUSH+bar',
+    lineUrl: LINE_URL,
+    phone: PHONE,
+    recommendedPoint:
+      'オレンジの間接照明とダーツが揃う大人の隠れ家バー。13〜24名限定の少人数プライベート空間で、仲間だけの特別なひとときを演出。国際通りそばの好立地で深夜まで楽しめます。',
+    faq: [
+      {
+        question: '少人数の貸切でも対応できますか？',
+        answer: '13名様から貸切でご利用いただけます。少人数だけのプライベートな空間でパーティーをお楽しみください。',
+      },
+      {
+        question: 'ダーツは自由に使えますか？',
+        answer: 'はい、貸切時間中はダーツをご自由にお使いいただけます。パーティーのアクティビティとして大人気です。',
+      },
+      {
+        question: '二次会の幹事サポートはありますか？',
+        answer: 'ぱーてぃー野郎の専任スタッフが、会場選びから当日の流れまで無料でサポートします。お気軽にLINEでご相談ください。',
+      },
+    ],
+    isFeatured: false,
+  },
+  {
     id: '22',
     name: 'Bar Oasis',
     slug: 'bar-oasis-naha',
