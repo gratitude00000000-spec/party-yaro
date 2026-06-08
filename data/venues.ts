@@ -6,6 +6,45 @@ export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
 
 export const venues: Venue[] = [
   {
+    id: '19',
+    name: 'BBQ STATION',
+    slug: 'bbq-station-okinawa',
+    area: '沖縄市',
+    address: '沖縄県沖縄市東1丁目5-17 4F',
+    capacityMin: 10,
+    capacityMax: 80,
+    priceText: '¥2,500〜 / 1名（飲み放題込）',
+    description:
+      '沖縄市・コザにある屋上BBQ専門スペース。白を基調としたスタイリッシュな空間に鮮やかなアートウォールが映え、オシャレなパーティー気分を演出。BBQグリル常設でカラオケ・プロジェクター・音響まで完備した、昼も夜も楽しめる手ぶらBBQ会場です。',
+    images: [
+      '/venues/bbq-station-okinawa-1.jpg',
+    ],
+    tags: ['貸切OK', '沖縄市', 'BBQ', '深夜OK'],
+    facilities: ['貸切OK', '飲み放題', 'プロジェクター', '音響', 'カラオケ', '深夜OK'],
+    scenes: ['結婚式二次会', '歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント'],
+    access: '沖縄市東エリア / 沖縄自動車道「沖縄北IC」より車で約5分',
+    mapUrl: 'https://maps.google.com/?q=沖縄市東1-5-17',
+    lineUrl: LINE_URL,
+    phone: PHONE,
+    recommendedPoint:
+      '手ぶらOKの屋上BBQが¥2,500〜という破格のコスパが魅力。白いソファとカラフルな壁アートで映えるスペースに、カラオケ・プロジェクター・音響も完備。昼から夜まで使えるオールラウンドな沖縄市の貸切BBQ会場です。',
+    faq: [
+      {
+        question: '手ぶらで参加できますか？',
+        answer: 'はい、BBQ機材・食材・飲み物はすべてご用意しています。手ぶらでお越しいただけますので、幹事様の準備負担が少ないのも魅力です。',
+      },
+      {
+        question: 'BBQ以外の設備はありますか？',
+        answer: 'カラオケ・プロジェクター・音響設備も完備しています。BBQで盛り上がった後はカラオケや映像演出も楽しめます。',
+      },
+      {
+        question: '二次会の幹事サポートはありますか？',
+        answer: 'ぱーてぃー野郎の専任スタッフが、会場選びから当日の流れまで無料でサポートします。お気軽にLINEでご相談ください。',
+      },
+    ],
+    isFeatured: false,
+  },
+  {
     id: '18',
     name: 'station 港川店',
     slug: 'station-urasoe',
