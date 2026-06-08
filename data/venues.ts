@@ -6,6 +6,45 @@ export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
 
 export const venues: Venue[] = [
   {
+    id: '20',
+    name: 'STATION 国場店',
+    slug: 'station-kokuba',
+    area: '那覇',
+    address: '沖縄県那覇市国場120 1F',
+    capacityMin: 10,
+    capacityMax: 40,
+    priceText: '¥2,500〜 / 1名（飲み放題込）',
+    description:
+      '那覇・国場にあるBBQ＆シミュレーションゴルフが楽しめるエンタメ会場。ネオンが輝くスタイリッシュな室内空間で、BBQを楽しみながらゴルフ・ダーツ・カラオケまで遊び放題。少人数のプライベートパーティーから歓送迎会・忘年会まで幅広く対応する那覇市内の個性派貸切会場です。',
+    images: [
+      '/venues/station-kokuba-1.jpg',
+    ],
+    tags: ['貸切OK', '那覇', 'BBQ', 'シミュレーションゴルフ', 'ダーツ'],
+    facilities: ['貸切OK', '飲み放題', '音響', 'カラオケ', '深夜OK'],
+    scenes: ['歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント', '結婚式二次会'],
+    access: '那覇市国場エリア / ゆいレール「小禄駅」より車で約5分',
+    mapUrl: 'https://maps.google.com/?q=那覇市国場120',
+    lineUrl: LINE_URL,
+    phone: PHONE,
+    recommendedPoint:
+      'BBQ＋シミュレーションゴルフ＋ダーツ＋カラオケが一度に楽しめる那覇唯一の複合エンタメ会場。¥2,500〜のリーズナブルな料金で、いつもと違う個性的なパーティーが実現。10名からの少人数にも対応しているので、仲間内の集まりにも最適です。',
+    faq: [
+      {
+        question: 'シミュレーションゴルフは初心者でも楽しめますか？',
+        answer: 'はい、ゴルフ初心者の方でも気軽に楽しめます。パーティーの余興としても大人気のアクティビティです。',
+      },
+      {
+        question: 'BBQと室内設備は同時に使えますか？',
+        answer: 'はい、BBQ・シミュレーションゴルフ・ダーツ・カラオケはすべて貸切時間中にご利用いただけます。',
+      },
+      {
+        question: '二次会の幹事サポートはありますか？',
+        answer: 'ぱーてぃー野郎の専任スタッフが、会場選びから当日の流れまで無料でサポートします。お気軽にLINEでご相談ください。',
+      },
+    ],
+    isFeatured: false,
+  },
+  {
     id: '19',
     name: 'BBQ STATION',
     slug: 'bbq-station-okinawa',
