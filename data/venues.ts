@@ -11,7 +11,7 @@ export const venues: Venue[] = [
     slug: 'station-kokuba',
     area: '那覇',
     address: '沖縄県那覇市国場120 1F',
-    capacityMin: 10,
+    capacityMin: 15,
     capacityMax: 40,
     priceText: '¥2,500〜 / 1名（飲み放題込）',
     description:
@@ -20,7 +20,7 @@ export const venues: Venue[] = [
       '/venues/station-kokuba-1.jpg',
     ],
     tags: ['貸切OK', '那覇', 'BBQ', 'シミュレーションゴルフ', 'ダーツ'],
-    facilities: ['貸切OK', '飲み放題', '音響', 'カラオケ', '深夜OK'],
+    facilities: ['貸切OK', '飲み放題', '音響', '深夜OK'],
     scenes: ['歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント', '結婚式二次会'],
     access: '那覇市国場エリア / ゆいレール「小禄駅」より車で約5分',
     mapUrl: 'https://maps.google.com/?q=那覇市国場120',
