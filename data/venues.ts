@@ -6,6 +6,45 @@ export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
 
 export const venues: Venue[] = [
   {
+    id: '18',
+    name: 'station 港川店',
+    slug: 'station-urasoe',
+    area: '浦添',
+    address: '沖縄県浦添市港川337-3',
+    capacityMin: 10,
+    capacityMax: 150,
+    priceText: '¥2,500〜 / 1名（飲み放題込）',
+    description:
+      '浦添・港川の開放的なBBQ専門会場。人工芝が広がるアウトドアスペースに屋根が付いており、雨天でも快適にBBQパーティーを楽しめます。10名の少人数から最大150名の大規模イベントまで対応。歓送迎会・忘年会・会社イベントなど幅広いシーンで喜ばれる沖縄らしい開放感あふれる会場です。',
+    images: [
+      '/venues/station-urasoe-1.jpg',
+    ],
+    tags: ['100名以上', '貸切OK', '浦添', 'BBQ', '屋根付き'],
+    facilities: ['貸切OK', '飲み放題', '音響', '深夜OK'],
+    scenes: ['結婚式二次会', '歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント'],
+    access: '浦添市港川エリア / 那覇空港より車で約20分 / 国道58号線沿い',
+    mapUrl: 'https://maps.google.com/?q=浦添市港川337-3',
+    lineUrl: LINE_URL,
+    phone: PHONE,
+    recommendedPoint:
+      '雨でも安心の屋根付きBBQ会場。沖縄の青空と緑を感じながら本格BBQが楽しめるオープンエアな空間で、10名〜150名まで柔軟に対応。リーズナブルな料金設定で歓送迎会・忘年会・会社イベントにぴったりの会場です。',
+    faq: [
+      {
+        question: '雨の日でも利用できますか？',
+        answer: 'はい、屋根付きのBBQスペースなので雨天でも快適にご利用いただけます。天候を気にせずパーティーをお楽しみください。',
+      },
+      {
+        question: '少人数でも貸切できますか？',
+        answer: '10名様からご利用いただけます。少人数から大人数まで、ぱーてぃー野郎スタッフが最適なレイアウトをご提案します。',
+      },
+      {
+        question: '二次会の幹事サポートはありますか？',
+        answer: 'ぱーてぃー野郎の専任スタッフが、会場選びから当日の流れまで無料でサポートします。お気軽にLINEでご相談ください。',
+      },
+    ],
+    isFeatured: false,
+  },
+  {
     id: '17',
     name: 'Free Style Bar Relations',
     slug: 'relations-okinawa',
