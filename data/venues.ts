@@ -7,10 +7,10 @@ export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
 export const venues: Venue[] = [
   {
     id: '30',
-    name: 'Ripple',
+    name: 'Ripple 若狭店',
     slug: 'ripple-naha',
     area: '那覇',
-    address: '沖縄県那覇市松山1-4-3 1F',
+    address: '沖縄県那覇市若狭エリア',
     capacityMin: 40,
     capacityMax: 50,
     priceText: '¥2,500〜 / 1名（飲み放題込）',
