@@ -6,6 +6,45 @@ export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
 
 export const venues: Venue[] = [
   {
+    id: '25',
+    name: 'Resort Cafe KAI',
+    slug: 'kai-tomishiro',
+    area: '豊見城',
+    address: '沖縄県豊見城市豊崎5-1',
+    capacityMin: 30,
+    capacityMax: 80,
+    priceText: '¥4,000〜 / 1名（飲み放題込）',
+    description:
+      '豊見城・豊崎の美らSUNビーチに隣接するリゾートカフェ。エメラルドグリーンの海と白砂ビーチを一望できるウッドデッキテラスが自慢。プロジェクター・カラオケ・音響・駐車場を完備し、結婚式二次会から会社イベントまで幅広いシーンに対応する非日常感たっぷりのビーチサイド会場です。',
+    images: [
+      '/venues/kai-tomishiro-1.jpg',
+    ],
+    tags: ['結婚式二次会', '貸切OK', '豊見城', 'ビーチ', 'オーシャンビュー', '駐車場'],
+    facilities: ['貸切OK', '飲み放題', 'プロジェクター', '音響', 'カラオケ', '駐車場'],
+    scenes: ['結婚式二次会', '歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント'],
+    access: '那覇空港より車で約20分 / 豊崎美らSUNビーチ隣接 / 駐車場完備',
+    mapUrl: 'https://maps.google.com/?q=豊見城市豊崎5-1+Resort+Cafe+KAI',
+    lineUrl: LINE_URL,
+    phone: PHONE,
+    recommendedPoint:
+      '美らSUNビーチを目の前に望むビーチサイドリゾートカフェ。エメラルドグリーンの海と白砂のビーチを眺めながらの貸切パーティーは格別。プロジェクター・カラオケ・音響・駐車場が揃い、結婚式二次会に最高のロケーションを提供します。',
+    faq: [
+      {
+        question: 'ビーチでの演出はできますか？',
+        answer: '美らSUNビーチに隣接しており、テラスからビーチを望む絶景での演出が可能です。詳細はLINEまたはお電話でご相談ください。',
+      },
+      {
+        question: '駐車場はありますか？',
+        answer: 'はい、駐車場を完備しています。車でのご来場も安心です。',
+      },
+      {
+        question: '二次会の幹事サポートはありますか？',
+        answer: 'ぱーてぃー野郎の専任スタッフが、会場選びから当日の流れまで無料でサポートします。お気軽にLINEでご相談ください。',
+      },
+    ],
+    isFeatured: false,
+  },
+  {
     id: '24',
     name: '北谷美浜オーシャンビューバー',
     slug: 'chatan-mihama-bar',
