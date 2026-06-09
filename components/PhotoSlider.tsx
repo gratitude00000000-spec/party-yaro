@@ -42,26 +42,30 @@ export default function PhotoSlider({ images, name }: Props) {
       </div>
 
       {/* Dots */}
-      <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5">
-        {images.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => {
-              sliderRef.current?.scrollTo({ left: i * sliderRef.current.offsetWidth, behavior: 'smooth' });
-              setCurrent(i);
-            }}
-            className={`w-2 h-2 rounded-full transition-all ${
-              i === current ? 'bg-white w-5' : 'bg-white/50'
-            }`}
-            aria-label={`写真${i + 1}`}
-          />
-        ))}
-      </div>
+      {images.length > 1 && (
+        <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => {
+                sliderRef.current?.scrollTo({ left: i * sliderRef.current.offsetWidth, behavior: 'smooth' });
+                setCurrent(i);
+              }}
+              className={`w-2 h-2 rounded-full transition-all ${
+                i === current ? 'bg-white w-5' : 'bg-white/50'
+              }`}
+              aria-label={`写真${i + 1}`}
+            />
+          ))}
+        </div>
+      )}
 
       {/* Count */}
-      <div className="absolute top-3 right-3 bg-black/50 text-white text-xs px-2.5 py-1 rounded-full backdrop-blur-sm">
-        {current + 1} / {images.length}
-      </div>
+      {images.length > 1 && (
+        <div className="absolute top-3 right-3 bg-black/50 text-white text-xs px-2.5 py-1 rounded-full backdrop-blur-sm">
+          {current + 1} / {images.length}
+        </div>
+      )}
     </div>
   );
 }
