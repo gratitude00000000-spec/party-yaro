@@ -7,7 +7,7 @@ export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
 export const venues: Venue[] = [
   {
     id: '30',
-    name: 'Ripple',
+    name: '那覇・若狭 ダイニングバー',
     slug: 'ripple-naha',
     area: '那覇',
     address: '沖縄県那覇市若狭エリア',
