@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { MapPin, Users, MessageCircle, ChevronRight } from 'lucide-react';
 import type { Venue } from '@/lib/types';
 import BookmarkButton from '@/components/BookmarkButton';
+import { getVenueImageAlt } from '@/lib/venueUtils';
 
 type Props = {
   venue: Venue;
@@ -17,7 +18,7 @@ export default function VenueCard({ venue, compact = false }: Props) {
         <div className={`relative overflow-hidden ${compact ? 'h-40' : 'h-52'}`}>
           <Image
             src={venue.images[0]}
-            alt={venue.name}
+            alt={getVenueImageAlt(venue)}
             fill
             className="object-cover"
             style={venue.cardImagePosition ? { objectPosition: venue.cardImagePosition } : undefined}

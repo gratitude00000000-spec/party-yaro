@@ -7,9 +7,10 @@ type Props = {
   images: string[];
   name: string;
   imagePosition?: string;
+  altBase?: string;
 };
 
-export default function PhotoSlider({ images, name, imagePosition }: Props) {
+export default function PhotoSlider({ images, name, imagePosition, altBase }: Props) {
   const [current, setCurrent] = useState(0);
   const sliderRef = useRef<HTMLDivElement>(null);
 
@@ -32,7 +33,7 @@ export default function PhotoSlider({ images, name, imagePosition }: Props) {
           <div key={src} className="photo-slide relative aspect-video">
             <Image
               src={src}
-              alt={`${name} 写真${i + 1}`}
+              alt={altBase ? (i === 0 ? altBase : `${altBase}・写真${i + 1}`) : `${name} 写真${i + 1}`}
               fill
               className="object-cover"
               style={imagePosition ? { objectPosition: imagePosition } : undefined}

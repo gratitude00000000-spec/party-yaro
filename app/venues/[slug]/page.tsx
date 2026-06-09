@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { getVenueBySlug, venues, LINE_URL, PHONE } from '@/data/venues';
 import PhotoSlider from '@/components/PhotoSlider';
+import { getVenueImageAlt } from '@/lib/venueUtils';
 import FaqAccordion from '@/components/FaqAccordion';
 import VenueCard from '@/components/VenueCard';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -70,7 +71,7 @@ export default function VenueDetailPage({ params }: Props) {
       />
 
       {/* Photo slider */}
-      <PhotoSlider images={venue.images} name={venue.name} imagePosition={venue.cardImagePosition} />
+      <PhotoSlider images={venue.images} name={venue.name} imagePosition={venue.cardImagePosition} altBase={getVenueImageAlt(venue)} />
 
       {/* Basic info */}
       <div className="px-4 pt-4 pb-2">
