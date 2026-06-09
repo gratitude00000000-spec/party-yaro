@@ -23,7 +23,7 @@ const steps = [
   {
     no: '01',
     title: 'LINEまたは電話で相談',
-    desc: '人数・エリア・予算・用途を伝えるだけ。しつこい営業は一切ありません。',
+    desc: '人数・エリア・予算・用途を伝えるだけ。',
   },
   {
     no: '02',
@@ -332,7 +332,7 @@ export default function HomePage() {
               {[
                 '相談・紹介・内覧手配すべて無料',
                 '沖縄600件以上のイベント案内実績',
-                'しつこい営業・勧誘は一切なし',
+                '県内優良店舗のみ案内',
               ].map((item) => (
                 <div key={item} className="flex items-start gap-2 mb-2 last:mb-0 lg:mb-0">
                   <CheckCircle size={16} className="text-[#06C755] shrink-0 mt-0.5" />
