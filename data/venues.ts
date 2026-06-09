@@ -43,7 +43,6 @@ export const venues: Venue[] = [
       },
     ],
     isFeatured: false,
-    cardImagePosition: 'right center',
   },
   {
     id: '34',
