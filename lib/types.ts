@@ -27,6 +27,7 @@ export type Venue = {
   instagramUrl?: string;
   mapEmbedUrl?: string;
   cardImagePosition?: string;
+  extraAreas?: string[];
 };
 
 export type GuideFaq = {

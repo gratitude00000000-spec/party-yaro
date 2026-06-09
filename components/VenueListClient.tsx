@@ -55,7 +55,8 @@ export default function VenueListClient({ venues, initialArea, initialScene, ini
       if (area === 'その他エリア') {
         if (MAIN_AREAS.includes(v.area)) return false;
       } else if (area !== 'すべて') {
-        if (v.area !== area) return false;
+        const matchesArea = v.area === area || (v.extraAreas?.includes(area) ?? false);
+        if (!matchesArea) return false;
       }
       // 用途
       if (scene !== 'すべて' && !v.scenes.includes(scene)) return false;
