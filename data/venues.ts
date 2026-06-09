@@ -880,7 +880,7 @@ export const venues: Venue[] = [
     description:
       '那覇・牧志の国際通りそばに佇む明るくカジュアルな洋風ダイニングバー。温かみのある木のインテリアとアメリカンポップな内装が心地よい空間を演出。20名の小規模から最大50名（立食80名）まで対応できる貸切会場として、歓送迎会・忘年会・誕生日会などあらゆるパーティーシーンに対応します。',
     images: [
-      '/venues/overalls-naha-1.png',
+      '/venues/overalls-naha-1.jpg',
     ],
     tags: ['貸切OK', '那覇', '飲み放題', '国際通り'],
     facilities: ['貸切OK', '飲み放題', '音響', 'カラオケ', '深夜OK'],
@@ -920,7 +920,7 @@ export const venues: Venue[] = [
     description:
       '那覇・久茂地に佇むディスコライクなMusicBar。カラフルな照明と重厚な音響がパーティーを非日常空間へと演出。貸切専用設定でプライベート感たっぷりの二次会・イベントを楽しめます。深夜まで賑やかに盛り上がれる那覇随一のMusic Bar会場です。',
     images: [
-      '/venues/blackberry-naha-1.png',
+      '/venues/blackberry-naha-1.jpg',
     ],
     tags: ['貸切OK', '那覇', '深夜OK', 'DJイベント', '音響'],
     facilities: ['貸切OK', '飲み放題', 'プロジェクター', '音響', '深夜OK'],
@@ -960,7 +960,7 @@ export const venues: Venue[] = [
     description:
       '那覇・安里に構える沖縄の雰囲気たっぷりの貸切パーティー会場。琉球の文化と空気感を感じられる空間で、本格ステージを完備。カラオケ・ダーツ・音響設備が揃い、二次会から歓送迎会・同窓会まで沖縄らしいひとときをお楽しみいただけます。',
     images: [
-      '/venues/yuimaru-naha-1.png',
+      '/venues/yuimaru-naha-1.jpg',
     ],
     tags: ['結婚式二次会', '貸切OK', '沖縄らしさ', 'ステージあり'],
     facilities: ['貸切OK', '飲み放題', '音響', 'カラオケ', '深夜OK'],
