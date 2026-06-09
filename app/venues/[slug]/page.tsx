@@ -70,7 +70,7 @@ export default function VenueDetailPage({ params }: Props) {
       />
 
       {/* Photo slider */}
-      <PhotoSlider images={venue.images} name={venue.name} />
+      <PhotoSlider images={venue.images} name={venue.name} imagePosition={venue.cardImagePosition} />
 
       {/* Basic info */}
       <div className="px-4 pt-4 pb-2">
@@ -169,7 +169,7 @@ export default function VenueDetailPage({ params }: Props) {
           </div>
         )}
         <div className="mt-3 flex flex-col gap-2">
-          {venue.mapUrl && (
+          {venue.mapEmbedUrl && venue.mapUrl && (
             <a
               href={venue.mapUrl}
               target="_blank"

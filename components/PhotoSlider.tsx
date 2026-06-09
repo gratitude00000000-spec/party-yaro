@@ -6,9 +6,10 @@ import Image from 'next/image';
 type Props = {
   images: string[];
   name: string;
+  imagePosition?: string;
 };
 
-export default function PhotoSlider({ images, name }: Props) {
+export default function PhotoSlider({ images, name, imagePosition }: Props) {
   const [current, setCurrent] = useState(0);
   const sliderRef = useRef<HTMLDivElement>(null);
 
@@ -34,6 +35,7 @@ export default function PhotoSlider({ images, name }: Props) {
               alt={`${name} 写真${i + 1}`}
               fill
               className="object-cover"
+              style={imagePosition ? { objectPosition: imagePosition } : undefined}
               sizes="100vw"
               priority={i === 0}
             />
