@@ -26,6 +26,7 @@ export type Venue = {
   isFeatured: boolean;
   instagramUrl?: string;
   mapEmbedUrl?: string;
+  cardImagePosition?: string;
 };
 
 export type GuideFaq = {

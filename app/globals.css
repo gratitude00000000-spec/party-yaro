@@ -103,7 +103,7 @@
 
   /* Gradient overlays */
   .gradient-dark-bottom {
-    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.05) 50%, transparent 100%);
   }
   .gradient-hero {
     background: linear-gradient(135deg, #0F0F0F 0%, #3D0009 60%, #1A0005 100%);

@@ -199,6 +199,7 @@ export const venues: Venue[] = [
       },
     ],
     isFeatured: false,
+    cardImagePosition: 'right center',
   },
   {
     id: '30',
@@ -241,10 +242,10 @@ export const venues: Venue[] = [
   },
   {
     id: '29',
-    name: 'Greenie',
+    name: '',
     slug: 'greennie-naha',
     area: '那覇',
-    address: '沖縄県那覇市若狭 若狭フランスビル5F',
+    address: '沖縄県那覇市若狭エリア',
     capacityMin: 40,
     capacityMax: 60,
     priceText: '¥2,500〜 / 1名（飲み放題込）',
@@ -256,7 +257,7 @@ export const venues: Venue[] = [
     tags: ['貸切OK', '那覇', '深夜OK', 'シミュレーションゴルフ', 'ダーツ', 'アミューズメント'],
     facilities: ['貸切OK', '飲み放題', 'プロジェクター', '音響', 'カラオケ', '深夜OK'],
     scenes: ['歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント', '結婚式二次会'],
-    access: '那覇市若狭エリア / ゆいレール「県庁前駅」より徒歩圏内',
+    access: '那覇市若狭エリア / 詳細はLINEでご確認ください',
     mapUrl: 'https://maps.google.com/?q=那覇市若狭+Greenie+golf+bar',
     lineUrl: LINE_URL,
     phone: PHONE,
@@ -280,7 +281,7 @@ export const venues: Venue[] = [
   },
   {
     id: '28',
-    name: 'Z-1',
+    name: '',
     slug: 'z1-naha',
     area: '那覇',
     address: '沖縄県那覇市若狭エリア',
@@ -358,10 +359,10 @@ export const venues: Venue[] = [
   },
   {
     id: '26',
-    name: 'WILD GEESE',
+    name: '',
     slug: 'wildgeese-naha',
     area: '那覇',
-    address: '沖縄県那覇市若狭2-3-15 クワビル3F',
+    address: '',
     capacityMin: 30,
     capacityMax: 40,
     priceText: '¥2,500〜 / 1名（飲み放題込）',
@@ -589,6 +590,7 @@ export const venues: Venue[] = [
       },
     ],
     isFeatured: false,
+    cardImagePosition: 'center bottom',
   },
   {
     id: '20',
@@ -628,6 +630,7 @@ export const venues: Venue[] = [
       },
     ],
     isFeatured: false,
+    cardImagePosition: 'center bottom',
   },
   {
     id: '19',
@@ -784,7 +787,7 @@ export const venues: Venue[] = [
       },
     ],
     isFeatured: false,
-    instagramUrl: 'https://www.instagram.com/entrance_0301/',
+    instagramUrl: undefined,
   },
   {
     id: '15',
@@ -825,7 +828,6 @@ export const venues: Venue[] = [
     ],
     isFeatured: false,
     instagramUrl: 'https://www.instagram.com/king_musicbar_okinawa/',
-    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.894057759263!2d127.7948931!3d26.3299298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e51305e91388a9%3A0x634295f45c35e5ec!2sMusic%20Bar%20KING!5e0!3m2!1sja!2sjp!4v1780841224645!5m2!1sja!2sjp',
   },
   {
     id: '14',
@@ -866,7 +868,6 @@ export const venues: Venue[] = [
     ],
     isFeatured: false,
     instagramUrl: 'https://www.instagram.com/bar_hash_tag/',
-    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.3982598360626!2d127.6885622!3d26.2162461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e569dd38877cfd%3A0x7a1d9fd4ad5d56b3!2zQkFSIOODj-ODg-OCt-ODpeOCv-OCsCDjgqLjg5_jg6Xjg7zjgrrjg6Hjg7Pjg4gm44OV44O844OJ44OQ44O8!5e0!3m2!1sja!2sjp!4v1780840553068!5m2!1sja!2sjp',
   },
   {
     id: '13',

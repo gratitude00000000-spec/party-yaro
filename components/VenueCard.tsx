@@ -20,6 +20,7 @@ export default function VenueCard({ venue, compact = false }: Props) {
             alt={venue.name}
             fill
             className="object-cover"
+            style={venue.cardImagePosition ? { objectPosition: venue.cardImagePosition } : undefined}
             sizes="(max-width: 640px) 100vw, 640px"
           />
           <div className="absolute inset-0 gradient-dark-bottom" />
