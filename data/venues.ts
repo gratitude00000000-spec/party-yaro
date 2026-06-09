@@ -591,6 +591,7 @@ export const venues: Venue[] = [
       },
     ],
     isFeatured: false,
+    cardImagePosition: 'center 65%',
   },
   {
     id: '20',
@@ -630,6 +631,7 @@ export const venues: Venue[] = [
       },
     ],
     isFeatured: false,
+    cardImagePosition: 'center 70%',
   },
   {
     id: '19',
