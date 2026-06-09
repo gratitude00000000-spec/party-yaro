@@ -46,6 +46,9 @@ export default function VenueListClient({ venues, initialArea, initialScene, ini
   // エリア変更時はページをリセット
   useEffect(() => { setNahaPage(1); }, [area, scene, facility, capacity]);
 
+  // ページ変更後に最上部へスクロール
+  useEffect(() => { window.scrollTo(0, 0); }, [nahaPage]);
+
   const filtered = useMemo(() => {
     return venues.filter((v) => {
       // エリア
@@ -225,7 +228,7 @@ export default function VenueListClient({ venues, initialArea, initialScene, ini
             {nahaPageCount > 1 && (
               <div className="flex items-center justify-center gap-3 pt-4 pb-2">
                 <button
-                  onClick={() => { setNahaPage(p => Math.max(1, p - 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                  onClick={() => setNahaPage(p => Math.max(1, p - 1))}
                   disabled={nahaPage === 1}
                   className="flex items-center gap-1 px-4 py-2 rounded-full border border-gray-300 text-sm font-bold disabled:opacity-30 disabled:cursor-not-allowed"
                 >
@@ -235,7 +238,7 @@ export default function VenueListClient({ venues, initialArea, initialScene, ini
                   {nahaPage} / {nahaPageCount}
                 </span>
                 <button
-                  onClick={() => { setNahaPage(p => Math.min(nahaPageCount, p + 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                  onClick={() => setNahaPage(p => Math.min(nahaPageCount, p + 1))}
                   disabled={nahaPage === nahaPageCount}
                   className="flex items-center gap-1 px-4 py-2 rounded-full border border-gray-300 text-sm font-bold disabled:opacity-30 disabled:cursor-not-allowed"
                 >

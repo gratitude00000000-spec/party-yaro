@@ -990,7 +990,7 @@ export const venues: Venue[] = [
     id: '9',
     name: 'PARTYSPACE NEXT',
     slug: 'partyspace-next',
-    area: '国際通り',
+    area: '那覇',
     address: '沖縄県那覇市牧志（沖映通り沿い）',
     capacityMin: 30,
     capacityMax: 150,
