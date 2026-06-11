@@ -38,6 +38,9 @@ const mplusRounded = Mochiy_Pop_One({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.okinawa-party-yarou.com'),
+  verification: {
+    google: 'IXVCVJ3F6dhHsQ1HPwgk_i84IjjR7sB2-BCBEis9SIs',
+  },
   title: {
     default: 'ぱーてぃー野郎｜沖縄の貸切パーティー会場探し',
     template: '%s | ぱーてぃー野郎',
