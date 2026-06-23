@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { MessageCircle, Search, ChevronRight, Star, CheckCircle, ArrowRight, Phone } from 'lucide-react';
 import { getFeaturedVenues } from '@/data/venues';
 import { PHONE, LINE_URL } from '@/data/venues';
+import CountUp from '@/components/CountUp';
 import VenueCard from '@/components/VenueCard';
 import LineBanner from '@/components/LineBanner';
 import LineLink from '@/components/LineLink';
@@ -109,7 +110,7 @@ export default function HomePage() {
             <div className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-3">
               <Star size={12} className="text-yellow-400 fill-yellow-400" />
               <span className="text-white text-xs font-bold">
-                イベント案内実績 <span className="font-outfit font-bold text-sm">792</span>件
+                イベント案内実績 <span className="font-outfit font-bold text-sm"><CountUp end={792} /></span>件
               </span>
               <Star size={12} className="text-yellow-400 fill-yellow-400" />
             </div>
