@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Home, Search, Bookmark, BookOpen, MessageCircle } from 'lucide-react';
 import { LINE_URL } from '@/data/venues';
-import { trackLineClick } from '@/lib/gtag';
+import { trackLineClick, trackSearchClick } from '@/lib/gtag';
 import { useFavorites } from '@/lib/FavoritesContext';
 
 const leftItems = [
@@ -17,17 +17,19 @@ const rightItems = [
   { href: '/guide', label: 'ガイド', icon: BookOpen },
 ];
 
-function NavTab({ href, label, icon: Icon, pathname, badge }: {
+function NavTab({ href, label, icon: Icon, pathname, badge, onClick }: {
   href: string;
   label: string;
   icon: typeof Home;
   pathname: string;
   badge?: number;
+  onClick?: () => void;
 }) {
   const isActive = pathname === href || (href !== '/' && pathname.startsWith(href));
   return (
     <Link
       href={href}
+      onClick={onClick}
       className="flex-1 flex flex-col items-center justify-center gap-1 touch-target relative isolate"
     >
       {isActive && (
@@ -61,7 +63,12 @@ export default function BottomNav() {
     <nav className="bottom-nav lg:hidden">
       <div className="flex items-stretch h-20 max-w-2xl mx-auto">
         {leftItems.map((item) => (
-          <NavTab key={item.href} {...item} pathname={pathname} />
+          <NavTab
+            key={item.href}
+            {...item}
+            pathname={pathname}
+            onClick={item.href === '/search' ? trackSearchClick : undefined}
+          />
         ))}
 
         {/* LINE FAB */}

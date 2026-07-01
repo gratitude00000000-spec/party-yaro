@@ -1,6 +1,9 @@
+'use client';
+
 import { MessageCircle, Gift } from 'lucide-react';
 import { PHONE } from '@/data/venues';
 import LineLink from '@/components/LineLink';
+import { trackPhoneClick } from '@/lib/gtag';
 
 export default function LineBanner() {
   return (
@@ -30,6 +33,7 @@ export default function LineBanner() {
           </LineLink>
           <a
             href={`tel:${PHONE}`}
+            onClick={() => trackPhoneClick('banner')}
             className="flex items-center justify-center gap-2.5 bg-white/10 border border-white/20 text-white font-bold text-base rounded-2xl py-4 px-8 active:scale-95 transition-transform backdrop-blur-sm"
           >
             📞 {PHONE}

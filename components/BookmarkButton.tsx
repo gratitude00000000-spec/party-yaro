@@ -2,6 +2,7 @@
 
 import { Bookmark } from 'lucide-react';
 import { useFavorites } from '@/lib/FavoritesContext';
+import { trackBookmarkClick } from '@/lib/gtag';
 
 export default function BookmarkButton({ venueId }: { venueId: string }) {
   const { isSaved, toggle } = useFavorites();
@@ -12,6 +13,7 @@ export default function BookmarkButton({ venueId }: { venueId: string }) {
       onClick={(e) => {
         e.preventDefault();
         e.stopPropagation();
+        trackBookmarkClick(venueId, saved);
         toggle(venueId);
       }}
       aria-label={saved ? '保存済み' : '保存する'}

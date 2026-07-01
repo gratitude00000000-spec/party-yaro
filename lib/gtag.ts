@@ -20,3 +20,30 @@ export function trackLineClick(location: string) {
     });
   }
 }
+
+export function trackPhoneClick(location: string) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', 'phone_click', {
+      button_location: location,
+      page_path: window.location.pathname,
+    });
+  }
+}
+
+export function trackBookmarkClick(venueId: string, saved: boolean) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', 'bookmark_click', {
+      venue_id: venueId,
+      action: saved ? 'remove' : 'add',
+      page_path: window.location.pathname,
+    });
+  }
+}
+
+export function trackSearchClick() {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', 'search_click', {
+      page_path: window.location.pathname,
+    });
+  }
+}
