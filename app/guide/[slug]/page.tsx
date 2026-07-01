@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Clock, ChevronRight, MessageCircle, Search } from 'lucide-react';
+import { Clock, ChevronRight, MessageCircle, Search, Instagram } from 'lucide-react';
 import { getAllSlugs, getGuideBySlug, getRelatedGuides } from '@/lib/guide-api';
 import { LINE_URL } from '@/data/venues';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -204,6 +204,32 @@ export default async function GuideDetailPage({ params }: Props) {
           </div>
         )}
       </article>
+
+      {/* Instagram誘導 */}
+      <div className="px-4 mb-6">
+        <a
+          href="https://instagram.com/partyyarou.okinawa"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-4 rounded-2xl p-4 active:scale-[0.98] transition-transform"
+          style={{
+            background: 'linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
+          }}
+        >
+          <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center shrink-0">
+            <Instagram size={24} className="text-white" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="text-white font-black text-sm leading-tight mb-0.5">
+              @partyyarou.okinawa
+            </p>
+            <p className="text-white/80 text-xs leading-snug">
+              会場の雰囲気・実際のパーティー写真をInstagramで公開中
+            </p>
+          </div>
+          <ChevronRight size={18} className="text-white/70 shrink-0" />
+        </a>
+      </div>
 
       {/* おすすめ会場導線 */}
       <div className="px-4 mb-6">
