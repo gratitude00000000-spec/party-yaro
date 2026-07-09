@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Search, Home, MessageCircle } from 'lucide-react';
-import { LINE_URL } from '@/data/venues';
+import LineCta from '@/components/LineCta';
 
 export default function NotFound() {
   return (
@@ -29,15 +29,10 @@ export default function NotFound() {
           <Search size={18} />
           会場一覧を見る
         </Link>
-        <a
-          href={LINE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full flex items-center justify-center gap-2 bg-[#06C755] text-white font-black rounded-2xl py-4"
-        >
+        <LineCta className="w-full flex items-center justify-center gap-2 bg-[#06C755] text-white font-black rounded-2xl py-4">
           <MessageCircle size={18} />
           LINEで無料相談
-        </a>
+        </LineCta>
       </div>
     </div>
   );

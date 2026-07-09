@@ -85,17 +85,11 @@ export default function VenueListClient({ venues, initialArea, initialScene, ini
     setCapacity('すべて');
   };
 
-  // 名前あり優先ソート（那覇・国際通り・沖縄市）
+  // 実在店舗優先ソート: isFeatured → 店舗名あり → 店舗名なし
   const nahaSorted = useMemo(() => {
-    if (!['那覇', '国際通り', '沖縄市'].includes(area)) return filtered;
-    return [...filtered].sort((a, b) => {
-      const aHas = a.name.trim() !== '';
-      const bHas = b.name.trim() !== '';
-      if (aHas && !bHas) return -1;
-      if (!aHas && bHas) return 1;
-      return 0;
-    });
-  }, [filtered, area]);
+    const rank = (v: Venue) => (v.isFeatured ? 0 : v.name.trim() ? 1 : 2);
+    return [...filtered].sort((a, b) => rank(a) - rank(b));
+  }, [filtered]);
 
   const nahaPageCount = Math.ceil(nahaSorted.length / NAHA_PAGE_SIZE);
   const nahaPaged = nahaSorted.slice((nahaPage - 1) * NAHA_PAGE_SIZE, nahaPage * NAHA_PAGE_SIZE);
@@ -230,7 +224,7 @@ export default function VenueListClient({ venues, initialArea, initialScene, ini
             )}
           </>
         ) : (
-          filtered.map((venue) => <VenueCard key={venue.id} venue={venue} />)
+          nahaSorted.map((venue) => <VenueCard key={venue.id} venue={venue} />)
         )}
       </div>
 
@@ -244,7 +238,7 @@ export default function VenueListClient({ venues, initialArea, initialScene, ini
             <button onClick={resetFilters} className="btn-primary-sm">条件をリセット</button>
           </div>
         ) : (
-          filtered.map((venue) => <VenueCard key={venue.id} venue={venue} />)
+          nahaSorted.map((venue) => <VenueCard key={venue.id} venue={venue} />)
         )}
       </div>
     </div>

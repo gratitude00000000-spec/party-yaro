@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Search, MapPin, Users, Tag, Settings2, ChevronRight, MessageCircle } from 'lucide-react';
-import { LINE_URL } from '@/data/venues';
+import LineCta from '@/components/LineCta';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
@@ -139,15 +139,10 @@ export default function SearchPage() {
           すべての会場を見る
         </Link>
         <p className="text-center text-sm text-gray-500 mb-4">または</p>
-        <a
-          href={LINE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full flex items-center justify-center gap-2.5 bg-[#06C755] text-white font-black text-base rounded-2xl py-4 shadow-lg shadow-green-900/20 active:scale-95 transition-transform"
-        >
+        <LineCta className="w-full flex items-center justify-center gap-2.5 bg-[#06C755] text-white font-black text-base rounded-2xl py-4 shadow-lg shadow-green-900/20 active:scale-95 transition-transform">
           <MessageCircle size={20} />
           条件をLINEで伝えて会場を探す（無料）
-        </a>
+        </LineCta>
         <p className="text-center text-xs text-gray-400 mt-2">
           「人数・エリア・予算」を伝えるだけでOK
         </p>

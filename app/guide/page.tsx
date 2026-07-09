@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { MessageCircle } from 'lucide-react';
 import { getAllGuides } from '@/lib/guide-api';
-import { LINE_URL } from '@/data/venues';
+import LineCta from '@/components/LineCta';
 import Breadcrumb from '@/components/Breadcrumb';
 import GuideListClient from '@/components/GuideListClient';
 
@@ -51,15 +51,10 @@ export default async function GuidePage() {
             人数・エリア・予算・用途を送るだけで、<br />
             条件に合う貸切パーティー会場をご提案します。
           </p>
-          <a
-            href={LINE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2.5 bg-[#06C755] text-white font-black text-base rounded-2xl py-4 active:scale-95 transition-transform"
-          >
+          <LineCta className="flex items-center justify-center gap-2.5 bg-[#06C755] text-white font-black text-base rounded-2xl py-4 active:scale-95 transition-transform w-full">
             <MessageCircle size={20} />
             LINEで無料相談する
-          </a>
+          </LineCta>
         </div>
       </div>
     </div>

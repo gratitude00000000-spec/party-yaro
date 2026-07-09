@@ -43,3 +43,10 @@ public/worker-*.js
 # local env
 .env.local
 .env*.local
+
+# 誤コミット防止
+00_HP制作共通テンプレートのコピー/
+PY キャラクター/
+提携店舗使用写真/
+*.mp4
+py-ogp-*.png

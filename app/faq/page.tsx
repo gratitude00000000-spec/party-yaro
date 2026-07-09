@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { MessageCircle } from 'lucide-react';
-import { LINE_URL, PHONE } from '@/data/venues';
+import { PHONE } from '@/data/venues';
+import LineCta from '@/components/LineCta';
 import FaqAccordion from '@/components/FaqAccordion';
 import Breadcrumb from '@/components/Breadcrumb';
 
@@ -148,15 +149,10 @@ export default function FaqPage() {
           <p className="text-sm text-gray-500 mb-4">
             LINEでお気軽にご質問ください。<br />24時間受付中です。
           </p>
-          <a
-            href={LINE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full flex items-center justify-center gap-2.5 bg-[#06C755] text-white font-black text-base rounded-2xl py-4 active:scale-95 transition-transform mb-3"
-          >
+          <LineCta className="w-full flex items-center justify-center gap-2.5 bg-[#06C755] text-white font-black text-base rounded-2xl py-4 active:scale-95 transition-transform mb-3">
             <MessageCircle size={20} />
             LINEで質問する（無料）
-          </a>
+          </LineCta>
           <a href={`tel:${PHONE}`} className="text-sm text-gray-500 font-medium">
             📞 {PHONE}
           </a>

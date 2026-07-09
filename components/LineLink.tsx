@@ -1,26 +1,30 @@
 'use client';
 
 import { trackLineClick } from '@/lib/gtag';
-import { LINE_URL } from '@/data/venues';
+import LineModal from '@/components/LineModal';
 
 interface LineLinkProps {
   location: string;
   className?: string;
   children: React.ReactNode;
   style?: React.CSSProperties;
+  'aria-label'?: string;
 }
 
-export default function LineLink({ location, className, children, style }: LineLinkProps) {
+export default function LineLink({ location, className, children, style, 'aria-label': ariaLabel }: LineLinkProps) {
   return (
-    <a
-      href={LINE_URL}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={className}
-      style={style}
-      onClick={() => trackLineClick(location)}
-    >
-      {children}
-    </a>
+    <LineModal>
+      {(open) => (
+        <button
+          type="button"
+          className={className}
+          style={style}
+          aria-label={ariaLabel}
+          onClick={() => { trackLineClick(location); open(); }}
+        >
+          {children}
+        </button>
+      )}
+    </LineModal>
   );
 }

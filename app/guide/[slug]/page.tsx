@@ -4,8 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Clock, ChevronRight, MessageCircle, Search, Instagram } from 'lucide-react';
 import { getAllSlugs, getGuideBySlug, getRelatedGuides } from '@/lib/guide-api';
-import { LINE_URL } from '@/data/venues';
 import Breadcrumb from '@/components/Breadcrumb';
+import LineCta from '@/components/LineCta';
 
 export const revalidate = 3600; // ISR: 1時間ごとに再取得
 export const dynamicParams = true; // 新記事はオンデマンド生成
@@ -176,15 +176,10 @@ export default async function GuideDetailPage({ params }: Props) {
           <p className="text-gray-400 text-sm mb-4 leading-relaxed">
             人数・エリア・予算・用途を送るだけで、条件に合う貸切パーティー会場をご提案します。
           </p>
-          <a
-            href={LINE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full flex items-center justify-center gap-2.5 bg-[#06C755] text-white font-black text-base rounded-2xl py-3.5 active:scale-95 transition-transform"
-          >
+          <LineCta className="w-full flex items-center justify-center gap-2.5 bg-[#06C755] text-white font-black text-base rounded-2xl py-3.5 active:scale-95 transition-transform">
             <MessageCircle size={20} />
             LINEで無料相談する（完全無料）
-          </a>
+          </LineCta>
         </div>
 
         {/* FAQ */}
@@ -286,15 +281,10 @@ export default async function GuideDetailPage({ params }: Props) {
             人数・エリア・予算・用途を送るだけで、<br />
             条件に合う貸切パーティー会場をご提案します。
           </p>
-          <a
-            href={LINE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2.5 bg-[#06C755] text-white font-black text-base rounded-2xl py-4 active:scale-95 transition-transform mb-3"
-          >
+          <LineCta className="flex items-center justify-center gap-2.5 bg-[#06C755] text-white font-black text-base rounded-2xl py-4 active:scale-95 transition-transform mb-3 w-full">
             <MessageCircle size={20} />
             LINEで無料相談する
-          </a>
+          </LineCta>
           <Link
             href="/venues"
             className="flex items-center justify-center gap-2 text-gray-400 text-sm font-bold border border-gray-700 rounded-2xl py-3 active:scale-95 transition-transform"
