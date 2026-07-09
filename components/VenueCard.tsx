@@ -1,9 +1,12 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { MapPin, Users, MessageCircle, ChevronRight } from 'lucide-react';
 import type { Venue } from '@/lib/types';
 import BookmarkButton from '@/components/BookmarkButton';
 import { getVenueImageAlt } from '@/lib/venueUtils';
+import LineModal from '@/components/LineModal';
 
 type Props = {
   venue: Venue;
@@ -82,15 +85,18 @@ export default function VenueCard({ venue, compact = false }: Props) {
             詳細を見る
             <ChevronRight size={14} />
           </Link>
-          <a
-            href={venue.lineUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 btn-line-sm"
-          >
-            <MessageCircle size={14} />
-            LINE相談
-          </a>
+          <LineModal>
+            {(open) => (
+              <button
+                type="button"
+                onClick={open}
+                className="flex-1 btn-line-sm"
+              >
+                <MessageCircle size={14} />
+                LINE相談
+              </button>
+            )}
+          </LineModal>
         </div>
       </div>
     </div>
