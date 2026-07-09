@@ -85,9 +85,9 @@ export default function VenueListClient({ venues, initialArea, initialScene, ini
     setCapacity('すべて');
   };
 
-  // 那覇スマホ用: 名前あり優先ソート → ページ分割
+  // 名前あり優先ソート（那覇・国際通り・沖縄市）
   const nahaSorted = useMemo(() => {
-    if (area !== '那覇') return filtered;
+    if (!['那覇', '国際通り', '沖縄市'].includes(area)) return filtered;
     return [...filtered].sort((a, b) => {
       const aHas = a.name.trim() !== '';
       const bHas = b.name.trim() !== '';
