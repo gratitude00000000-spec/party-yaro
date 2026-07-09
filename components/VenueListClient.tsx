@@ -10,7 +10,7 @@ const NAHA_PAGE_SIZE = 10;
 const MAIN_AREAS = ['那覇', '国際通り', '北谷', '沖縄市'];
 const AREAS = ['すべて', ...MAIN_AREAS, 'その他エリア'];
 const SCENES = ['結婚式二次会', '忘年会', '新年会', '歓送迎会', '同窓会', '会社イベント', 'DJイベント', 'その他イベント'];
-const FACILITIES = ['貸切OK', '飲み放題', 'プロジェクター', '音響', 'カラオケ', 'ダーツ', '深夜OK'];
+const FACILITIES = ['貸切OK', '飲み放題', 'フードが充実', 'プロジェクター', '音響', 'カラオケ', 'ダーツ', '深夜OK'];
 const CAPACITIES = [
   { label: 'すべて',     value: 'すべて' },
   { label: '20名以下',   value: 'max20' },
