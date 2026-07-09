@@ -4,8 +4,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Search, Bookmark, BookOpen, MessageCircle, Phone } from 'lucide-react';
-import { LINE_URL, PHONE } from '@/data/venues';
+import { PHONE } from '@/data/venues';
 import { trackLineClick, trackPhoneClick } from '@/lib/gtag';
+import LineModal from '@/components/LineModal';
 import { useFavorites } from '@/lib/FavoritesContext';
 
 const navLinks = [
@@ -84,16 +85,18 @@ export default function Header() {
           </a>
 
           {/* LINE CTA */}
-          <a
-            href={LINE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackLineClick('header')}
-            className="flex items-center gap-2 bg-[#06C755] text-white font-black text-sm rounded-xl px-4 py-2 hover:bg-[#05a847] transition-colors shadow-md shadow-green-900/30"
-          >
-            <MessageCircle size={16} />
-            LINEで無料相談
-          </a>
+          <LineModal>
+            {(open) => (
+              <button
+                type="button"
+                onClick={() => { trackLineClick('header'); open(); }}
+                className="flex items-center gap-2 bg-[#06C755] text-white font-black text-sm rounded-xl px-4 py-2 hover:bg-[#05a847] transition-colors shadow-md shadow-green-900/30"
+              >
+                <MessageCircle size={16} />
+                LINEで無料相談
+              </button>
+            )}
+          </LineModal>
         </div>
 
       </div>

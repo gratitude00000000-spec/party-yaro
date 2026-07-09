@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Home, Search, Bookmark, BookOpen, MessageCircle } from 'lucide-react';
-import { LINE_URL } from '@/data/venues';
 import { trackLineClick, trackSearchClick } from '@/lib/gtag';
+import LineModal from '@/components/LineModal';
 import { useFavorites } from '@/lib/FavoritesContext';
 
 const leftItems = [
@@ -72,19 +72,21 @@ export default function BottomNav() {
         ))}
 
         {/* LINE FAB */}
-        <a
-          href={LINE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+        <LineModal>
+          {(open) => (
+        <button
+          type="button"
           className="flex-1 flex flex-col items-center justify-end pb-2 touch-target relative"
-          onClick={() => trackLineClick('bottomnav')}
+          onClick={() => { trackLineClick('bottomnav'); open(); }}
         >
           <div className="absolute left-1/2 -translate-x-1/2 -top-5 w-14 h-14 bg-[#06C755] rounded-full flex items-center justify-center shadow-xl shadow-green-900/40 border-[3px] border-white">
             <MessageCircle size={26} strokeWidth={2.5} className="text-white" />
             <span className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-red-500 rounded-full border-2 border-white animate-pulse" />
           </div>
           <span className="text-[11px] font-bold text-[#06C755]">LINE</span>
-        </a>
+        </button>
+          )}
+        </LineModal>
 
         {rightItems.map((item) => (
           <NavTab
