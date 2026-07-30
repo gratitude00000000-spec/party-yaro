@@ -804,7 +804,7 @@ export const venues: Venue[] = [
     images: [
       '/venues/musicbar-king-okinawa-1.jpg',
     ],
-    cardImagePosition: 'bottom right',
+    cardImagePosition: 'right 70%',
     tags: ['100名以上', '貸切OK', '沖縄市', 'DJイベント', '駐車場'],
     facilities: ['貸切OK', '飲み放題', '音響', 'カラオケ', '駐車場', '深夜OK'],
     scenes: ['結婚式二次会', '歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント', 'DJイベント'],
