@@ -953,7 +953,7 @@ export const venues: Venue[] = [
   },
   {
     id: '11',
-    name: 'ゆいまーる',
+    name: '',
     slug: 'yuimaru-naha',
     area: '那覇',
     extraAreas: ['国際通り'],
