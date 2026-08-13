@@ -886,7 +886,7 @@ export const venues: Venue[] = [
       '/venues/overalls-naha-1.jpg',
     ],
     tags: ['貸切OK', '那覇', '飲み放題', '国際通り'],
-    facilities: ['貸切OK', '飲み放題', 'フードが充実', '音響', 'カラオケ', '深夜OK'],
+    facilities: ['貸切OK', '飲み放題', 'フードが充実', '音響', '深夜OK'],
     scenes: ['結婚式二次会', '歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント', 'DJイベント'],
     access: 'ゆいレール「牧志駅」より徒歩3分 / 国際通りから徒歩2分',
     mapUrl: 'https://maps.google.com/?q=那覇市牧志2-21-21',
