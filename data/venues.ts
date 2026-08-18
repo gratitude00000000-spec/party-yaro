@@ -591,6 +591,7 @@ export const venues: Venue[] = [
     ],
     isFeatured: false,
     cardImagePosition: 'center 65%',
+    websiteUrl: 'https://station-bbq.com/',
   },
   {
     id: '20',
@@ -1035,6 +1036,7 @@ export const venues: Venue[] = [
     ],
     isFeatured: true,
     instagramUrl: 'https://www.instagram.com/partyspacenext_okinawa/',
+    websiteUrl: 'https://partyspace-next-naha.com/',
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.304473184186!2d127.68551409999999!3d26.2192947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e569a1ab33fa45%3A0xdf525a657735f1f4!2sPOLEDANCE%26PARTYSPACE%20NEXT!5e0!3m2!1sja!2sjp!4v1779955396537!5m2!1sja!2sjp',
   },
   {
@@ -1080,6 +1082,7 @@ export const venues: Venue[] = [
     ],
     isFeatured: true,
     instagramUrl: 'https://www.instagram.com/next.okinawacity/',
+    websiteUrl: 'https://partyspace-next2-okinawacity.com/',
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.868882157608!2d127.79713170000001!3d26.330744900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e513264c359f65%3A0xeb5080cbc3cccbf6!2zUEFSVFlTUEFDRSBORVhU4oWhIOaylue4hOW4gg!5e0!3m2!1sja!2sjp!4v1780031274380!5m2!1sja!2sjp',
   },
 ];

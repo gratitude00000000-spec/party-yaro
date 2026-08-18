@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import {
-  MapPin, Users, Phone, MessageCircle, Check, ChevronRight, Star, Instagram,
+  MapPin, Users, Phone, MessageCircle, Check, ChevronRight, Star, Instagram, Globe,
 } from 'lucide-react';
 import { getVenueBySlug, venues, LINE_URL, PHONE } from '@/data/venues';
 import PhotoSlider from '@/components/PhotoSlider';
@@ -181,6 +181,17 @@ export default function VenueDetailPage({ params }: Props) {
               <MapPin size={14} />
               Googleマップで見る
               <ChevronRight size={14} />
+            </a>
+          )}
+          {venue.websiteUrl && (
+            <a
+              href={venue.websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 rounded-xl py-2.5 font-bold text-sm text-white bg-gray-700 active:scale-95 transition-transform"
+            >
+              <Globe size={16} />
+              公式サイト
             </a>
           )}
           {venue.instagramUrl && (

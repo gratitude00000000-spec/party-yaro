@@ -25,6 +25,7 @@ export type Venue = {
   faq: VenueFaq[];
   isFeatured: boolean;
   instagramUrl?: string;
+  websiteUrl?: string;
   mapEmbedUrl?: string;
   cardImagePosition?: string;
   extraAreas?: string[];
