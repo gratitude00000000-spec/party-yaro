@@ -24,6 +24,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${venue.name} | ${venue.area}の貸切パーティー会場`,
     description: `${venue.name}（${venue.area}）は${venue.capacityMin}〜${venue.capacityMax}名に対応。${venue.recommendedPoint.slice(0, 80)}...`,
+    alternates: {
+      canonical: `https://www.okinawa-party-yarou.com/venues/${venue.slug}`,
+    },
     openGraph: {
       images: [{ url: venue.images[0], width: 800, height: 600, alt: venue.name }],
     },

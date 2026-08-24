@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: '会場探しガイド | 沖縄の貸切パーティー・二次会・忘年会完全ガイド',
   description:
     '沖縄の貸切パーティー会場・結婚式二次会・忘年会の選び方を徹底解説。エリア別・人数別・用途別・幹事向けノウハウをまとめた完全ガイドです。',
+  alternates: {
+    canonical: 'https://www.okinawa-party-yarou.com/guide',
+  },
 };
 
 export default async function GuidePage() {

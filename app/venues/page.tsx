@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: '会場一覧 | 沖縄の二次会・貸切パーティー会場',
   description:
     '沖縄の二次会・貸切パーティー会場一覧。那覇・国際通り・北谷・宜野湾・浦添・沖縄市エリアの会場をエリア・人数・用途・設備で絞り込み検索できます。',
+  alternates: {
+    canonical: 'https://www.okinawa-party-yarou.com/venues',
+  },
 };
 
 type Props = {

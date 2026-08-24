@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'よくある質問 | ぱーてぃー野郎',
   description:
     'ぱーてぃー野郎のよくある質問。利用方法・料金・会場について・予約の流れなどご不明点をまとめました。解決しない場合はLINEでお気軽にご相談ください。',
+  alternates: {
+    canonical: 'https://www.okinawa-party-yarou.com/faq',
+  },
 };
 
 const faqCategories = [

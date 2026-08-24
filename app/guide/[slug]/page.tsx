@@ -28,6 +28,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
+    alternates: {
+      canonical: `https://www.okinawa-party-yarou.com/guide/${params.slug}`,
+    },
     openGraph: ogImageUrl
       ? {
           title,
@@ -71,7 +74,7 @@ export default async function GuideDetailPage({ params }: Props) {
     publisher: {
       '@type': 'Organization',
       name: 'ぱーてぃー野郎',
-      url: 'https://party-yaro.vercel.app',
+      url: 'https://www.okinawa-party-yarou.com',
     },
   };
 
@@ -92,8 +95,8 @@ export default async function GuideDetailPage({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://party-yaro.vercel.app' },
-      { '@type': 'ListItem', position: 2, name: '会場探しガイド', item: 'https://party-yaro.vercel.app/guide' },
+      { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://www.okinawa-party-yarou.com' },
+      { '@type': 'ListItem', position: 2, name: '会場探しガイド', item: 'https://www.okinawa-party-yarou.com/guide' },
       { '@type': 'ListItem', position: 3, name: guide.title },
     ],
   };
