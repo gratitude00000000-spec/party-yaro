@@ -203,6 +203,17 @@ details[open] summary ~ * {
   background: white !important;
 }
 
+/* Swipe hint animation */
+@keyframes swipe-hint {
+  0%   { opacity: 0; transform: translateX(12px); }
+  20%  { opacity: 1; transform: translateX(0); }
+  80%  { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(-12px); }
+}
+.animate-swipe-hint {
+  animation: swipe-hint 2s ease-in-out forwards;
+}
+
 /* Loading skeleton */
 @keyframes shimmer {
   0% { background-position: -200% 0; }
