@@ -1006,6 +1006,10 @@ export const venues: Venue[] = [
       '那覇・国際通りと沖映通りに隣接する大型パーティースペース。最大150名を収容できる広々とした空間で、結婚式二次会から企業イベント・DJパーティーまで幅広いシーンに対応。プロジェクター・大型スクリーン・プロ音響・カラオケを完備し、深夜まで賑やかなパーティーをお楽しみいただけます。那覇随一のアクセスで、遠方からのゲストにも最適な立地です。',
     images: [
       '/venues/partyspace-next-1.jpg',
+      '/venues/partyspace-next-2.jpg',
+      '/venues/partyspace-next-3.jpg',
+      '/venues/partyspace-next-4.jpg',
+      '/venues/partyspace-next-5.jpg',
     ],
     tags: ['100名以上', '結婚式二次会', '貸切OK', '国際通り', 'DJイベント'],
     facilities: ['貸切OK', '飲み放題', 'プロジェクター', '音響', 'カラオケ', '深夜OK'],
