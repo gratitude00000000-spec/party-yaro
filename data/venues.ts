@@ -1085,6 +1085,43 @@ export const venues: Venue[] = [
     websiteUrl: 'https://partyspace-next2-okinawacity.com/',
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.868882157608!2d127.79713170000001!3d26.330744900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e513264c359f65%3A0xeb5080cbc3cccbf6!2zUEFSVFlTUEFDRSBORVhU4oWhIOaylue4hOW4gg!5e0!3m2!1sja!2sjp!4v1780031274380!5m2!1sja!2sjp',
   },
+  {
+    id: '26',
+    name: 'G BOX',
+    slug: 'gbox-naha',
+    area: '那覇',
+    address: '沖縄県那覇市松山2丁目9-5 フラミンゴⅡビル6F',
+    capacityMin: 20,
+    capacityMax: 70,
+    priceText: '¥3,000〜 / 1名（飲み放題込）',
+    description:
+      '那覇・松山エリアに位置する完全貸切パーティースペース。DJブース・プロ音響・大型モニターを完備し、結婚式二次会からDJイベントまで幅広いシーンに対応。深夜まで賑やかなパーティーをお楽しみいただけます。',
+    images: ['/venues/gbox-naha-1.jpg'],
+    tags: ['貸切OK', '那覇', '飲み放題', '音響', 'DJイベント'],
+    facilities: ['貸切OK', '飲み放題', '音響', '深夜OK'],
+    scenes: ['結婚式二次会', '歓送迎会', '忘年会', '新年会', '同窓会', '会社イベント', 'DJイベント'],
+    access: '那覇市松山2丁目・フラミンゴⅡビル6F',
+    mapUrl: 'https://maps.google.com/?q=那覇市松山2丁目9-5',
+    lineUrl: LINE_URL,
+    phone: PHONE,
+    recommendedPoint:
+      '那覇・松山エリアの6階に位置する隠れ家的パーティースペース。DJブース・プロ音響・大型モニターが揃い、本格的なDJイベントから結婚式二次会まで対応。完全貸切で20〜70名まで収容できるため、少人数から中規模パーティーに最適です。',
+    faq: [
+      {
+        question: 'DJブースや音響設備はありますか？',
+        answer: 'はい、DJブース・プロ音響・大型モニターを完備しています。本格的なDJイベントにも対応できます。',
+      },
+      {
+        question: '深夜まで利用できますか？',
+        answer: 'はい、深夜営業に対応しています。詳しい営業時間はぱーてぃー野郎のスタッフにLINEでご確認ください。',
+      },
+      {
+        question: '二次会の幹事サポートはありますか？',
+        answer: 'ぱーてぃー野郎の専任スタッフが、会場選びから当日の流れまで無料でサポートします。お気軽にLINEでご相談ください。',
+      },
+    ],
+    isFeatured: false,
+  },
 ];
 
 export const getVenueBySlug = (slug: string): Venue | undefined =>
