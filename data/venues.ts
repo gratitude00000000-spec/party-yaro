@@ -515,7 +515,7 @@ export const venues: Venue[] = [
   },
   {
     id: '22',
-    name: 'Bar Oasis',
+    name: '',
     slug: 'bar-oasis-naha',
     area: '那覇',
     address: '沖縄県那覇市久茂地2丁目3-11 レナトス久茂地ビル2F',
@@ -914,7 +914,7 @@ export const venues: Venue[] = [
   },
   {
     id: '12',
-    name: 'Black Berry',
+    name: '',
     slug: 'blackberry-naha',
     area: '那覇',
     address: '沖縄県那覇市久茂地2丁目4-17 マルユウビル4F',
