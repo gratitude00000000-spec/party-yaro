@@ -113,34 +113,57 @@ export const viewport: Viewport = {
   themeColor: '#111111',
 };
 
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'ぱーてぃー野郎',
-  description:
-    '沖縄県内の二次会・貸切パーティー会場を無料でご提案するサービス。結婚式二次会・忘年会・歓送迎会・イベント会場を幹事の代わりにご提案します。',
-  url: 'https://www.okinawa-party-yarou.com',
-  telephone: '098-975-5682',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '牧志2-18-4 2-C',
-    addressLocality: '那覇市',
-    addressRegion: '沖縄県',
-    postalCode: '900-0013',
-    addressCountry: 'JP',
+const organizationSchema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': 'https://www.okinawa-party-yarou.com/#organization',
+    name: 'ぱーてぃー野郎',
+    description:
+      '沖縄県内の二次会・貸切パーティー会場を無料でご提案するサービス。結婚式二次会・忘年会・歓送迎会・イベント会場を幹事の代わりにご提案します。',
+    url: 'https://www.okinawa-party-yarou.com',
+    telephone: '098-975-5682',
+    areaServed: {
+      '@type': 'State',
+      name: '沖縄県',
+    },
+    sameAs: [
+      'https://instagram.com/partyyarou.okinawa',
+      'https://line.me/ti/p/@381ivfov',
+    ],
   },
-  areaServed: {
-    '@type': 'State',
-    name: '沖縄県',
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': 'https://www.okinawa-party-yarou.com/#website',
+    name: 'ぱーてぃー野郎',
+    url: 'https://www.okinawa-party-yarou.com',
+    publisher: {
+      '@id': 'https://www.okinawa-party-yarou.com/#organization',
+    },
   },
-  serviceType: 'パーティー会場紹介',
-  priceRange: '無料',
-  openingHours: 'Mo-Su 00:00-24:00',
-  sameAs: [
-    'https://instagram.com/partyyarou.okinawa',
-    'https://line.me/ti/p/@381ivfov',
-  ],
-};
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': 'https://www.okinawa-party-yarou.com/#service',
+    name: '沖縄パーティー会場無料紹介サービス',
+    description:
+      '那覇・国際通り・北谷・沖縄市など沖縄県内の貸切パーティー会場を無料でご提案。LINE相談・内覧手配まで幹事をワンストップでサポートします。',
+    provider: {
+      '@id': 'https://www.okinawa-party-yarou.com/#organization',
+    },
+    areaServed: {
+      '@type': 'State',
+      name: '沖縄県',
+    },
+    serviceType: 'パーティー会場紹介',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'JPY',
+    },
+  },
+];
 
 export default function RootLayout({
   children,

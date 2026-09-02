@@ -41,6 +41,15 @@ export default function VenueDetailPage({ params }: Props) {
     .filter((v) => v.id !== venue.id && v.area === venue.area)
     .slice(0, 2);
 
+  const BASE_URL = 'https://www.okinawa-party-yarou.com';
+  const areaToCity: Record<string, string> = {
+    '那覇': '那覇市',
+    '国際通り': '那覇市',
+    '北谷': '北谷町',
+    '沖縄市': '沖縄市',
+    '浦添': '浦添市',
+    '豊見城': '豊見城市',
+  };
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'EventVenue',
@@ -49,14 +58,14 @@ export default function VenueDetailPage({ params }: Props) {
     address: {
       '@type': 'PostalAddress',
       streetAddress: venue.address,
-      addressLocality: venue.area,
+      addressLocality: areaToCity[venue.area] ?? venue.area,
       addressRegion: '沖縄県',
       addressCountry: 'JP',
     },
     telephone: venue.phone,
     maximumAttendeeCapacity: venue.capacityMax,
-    url: `https://www.okinawa-party-yarou.com/venues/${venue.slug}`,
-    image: venue.images,
+    url: `${BASE_URL}/venues/${venue.slug}`,
+    image: venue.images.map((img) => img.startsWith('http') ? img : `${BASE_URL}${img}`),
   };
 
   return (

@@ -998,7 +998,7 @@ export const venues: Venue[] = [
     slug: 'partyspace-next',
     area: '国際通り',
     extraAreas: ['那覇'],
-    address: '沖縄県那覇市牧志（沖映通り沿い）',
+    address: '沖縄県那覇市牧志2丁目18-4 2-C',
     capacityMin: 30,
     capacityMax: 150,
     priceText: '¥3,500〜 / 1名（飲み放題込）',

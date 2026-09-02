@@ -150,7 +150,7 @@ export default function FaqPage() {
         <div className="bg-gray-50 rounded-2xl p-5 text-center border border-gray-100">
           <p className="font-black text-gray-900 mb-1">解決しない場合は</p>
           <p className="text-sm text-gray-500 mb-4">
-            LINEでお気軽にご質問ください。<br />24時間受付中です。
+            LINEでお気軽にご質問ください。<br />24時間送信受付中です。
           </p>
           <LineCta className="w-full flex items-center justify-center gap-2.5 bg-[#06C755] text-white font-black text-base rounded-2xl py-4 active:scale-95 transition-transform mb-3">
             <MessageCircle size={20} />

@@ -41,7 +41,7 @@ export default function LineBanner() {
         </div>
 
         <p className="text-gray-500 text-xs mt-4">
-          24時間受付中 ・ 内覧手配も無料 ・ しつこい営業一切なし
+          LINEは24時間送信受付 ・ 内覧手配も無料 ・ しつこい営業一切なし
         </p>
       </div>
     </section>
