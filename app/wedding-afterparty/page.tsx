@@ -40,7 +40,7 @@ const faqItems = [
   },
   {
     question: '結婚式二次会の費用相場はどのくらいですか？',
-    answer: '沖縄の結婚式二次会は、飲み放題込みで1名あたり3,500〜6,000円が相場です。50名・100名などの人数規模や、会場のグレードによって変わります。会場使用料が無料の会場も多くあります。',
+    answer: '沖縄の結婚式二次会は、飲み放題込みで1名あたり3,500〜4,500円が相場です。会場使用料は基本無料で、人数が増えても1名あたりの単価は変わりません。保証人数に満たない場合のみ単価が上がる可能性があります。',
   },
   {
     question: '二次会の幹事サポートはしてもらえますか？',
@@ -111,7 +111,7 @@ export default function WeddingAfterpartyPage() {
         <ul className="space-y-2 mb-5">
           {[
             '相談・紹介・内覧手配すべて無料',
-            '費用相場 1名あたり3,500〜6,000円（飲み放題込み）',
+            '費用相場 1名あたり3,500〜4,500円（飲み放題込み・会場使用料基本無料）',
             'プロジェクター・スクリーン完備の会場多数',
             '那覇・国際通り・北谷・沖縄市エリア対応',
             '急な相談・直前依頼にも可能な限り対応',
@@ -179,15 +179,15 @@ export default function WeddingAfterpartyPage() {
               <tr className="bg-primary text-white">
                 <th className="p-3 text-left font-bold rounded-tl-xl">人数</th>
                 <th className="p-3 text-center font-bold">1名あたり（飲み放題込み）</th>
-                <th className="p-3 text-center font-bold rounded-tr-xl">会場使用料</th>
+                <th className="p-3 text-center font-bold rounded-tr-xl">備考</th>
               </tr>
             </thead>
             <tbody>
               {[
-                { size: '20〜40名', price: '3,500〜4,500円', room: '無料〜30,000円' },
-                { size: '40〜80名', price: '3,500〜5,000円', room: '無料〜50,000円' },
-                { size: '80〜120名', price: '3,500〜5,500円', room: '無料〜70,000円' },
-                { size: '120名以上', price: '4,000〜6,000円', room: '無料〜100,000円' },
+                { size: '1名あたり料金', price: '3,500〜4,500円', room: '飲み放題込み' },
+                { size: '会場使用料', price: '基本無料', room: '—' },
+                { size: '人数による単価変動', price: 'なし', room: '保証人数未満の場合のみ増額の可能性あり' },
+                { size: '平均参加人数の目安', price: '披露宴招待の約1/3', room: '例：招待150名→二次会約50名' },
               ].map((row, i) => (
                 <tr key={row.size} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                   <td className="p-3 font-bold text-gray-900 border-b border-gray-100">{row.size}</td>
