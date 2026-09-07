@@ -169,7 +169,7 @@ export default function FaqPage() {
       {/* 結婚式二次会ガイドへの誘導 */}
       <div className="px-4 pt-2 pb-4">
         <Link
-          href="/wedding-afterparty"
+          href="/guide/okinawa-wedding-afterparty-complete-guide"
           className="flex items-center gap-3 bg-red-50 border border-red-100 rounded-2xl p-4 hover:border-primary transition-colors"
         >
           <span className="text-2xl shrink-0">💍</span>

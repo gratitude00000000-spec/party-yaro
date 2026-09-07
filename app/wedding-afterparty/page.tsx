@@ -201,6 +201,21 @@ export default function WeddingAfterpartyPage() {
         <p className="text-xs text-gray-400 mt-2">※会場・プランにより異なります。詳細はLINEでご相談ください。</p>
       </section>
 
+      {/* ── 詳細ガイド記事への誘導 ── */}
+      <section className="px-4 py-6 border-b border-gray-100">
+        <Link
+          href="/guide/okinawa-wedding-afterparty-complete-guide"
+          className="flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-2xl p-4 hover:border-primary transition-colors"
+        >
+          <span className="text-2xl shrink-0">📖</span>
+          <div className="flex-1 min-w-0">
+            <p className="font-black text-gray-900 text-sm">沖縄で結婚式二次会の会場を探すなら｜完全解説ガイド</p>
+            <p className="text-xs text-gray-500 mt-0.5">費用・流れ・選び方・幹事ノウハウを詳しく解説</p>
+          </div>
+          <ChevronRight size={16} className="text-primary shrink-0" />
+        </Link>
+      </section>
+
       {/* ── エリア別ガイド ── */}
       <section className="px-4 py-8 border-b border-gray-100">
         <h2 className="text-xl font-black text-gray-900 mb-4">
