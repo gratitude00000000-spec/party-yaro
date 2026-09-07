@@ -16,26 +16,37 @@ type Props = {
 function AnonymousVenueCard({ venue, compact }: Props) {
   return (
     <div className="venue-card overflow-hidden">
-      {/* Header */}
-      <div className={`relative bg-gradient-to-br from-[#1e2540] to-[#2a3158] ${compact ? 'h-40' : 'h-52'} flex flex-col justify-between p-4`}>
-        <div className="flex items-center justify-between">
-          <span className="bg-white/15 text-white/80 text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-            <MapPin size={10} />
-            {venue.area}
-          </span>
-          <span className="bg-primary text-white text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-            <Users size={10} />
-            {venue.capacityMin}〜{venue.capacityMax}名
-          </span>
-        </div>
-        <div>
-          <div className="flex items-center gap-2 mb-1.5">
-            <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center">
-              <Lock size={11} className="text-white/60" />
-            </div>
-            <p className="text-white/50 text-xs">会場名・地図は非公開</p>
+      {/* Image (写真はそのまま表示、店名のみ非公開) */}
+      <div className={`relative overflow-hidden ${compact ? 'h-40' : 'h-52'}`}>
+        <Image
+          src={venue.images[0]}
+          alt={`${venue.area}エリアの提携会場`}
+          fill
+          className="object-cover"
+          style={venue.cardImagePosition ? { objectPosition: venue.cardImagePosition } : undefined}
+          sizes="(max-width: 640px) 100vw, 640px"
+        />
+        <div className="absolute inset-0 gradient-dark-bottom" />
+
+        {/* Area badge */}
+        <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-gray-800 text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+          <MapPin size={10} />
+          {venue.area}
+        </span>
+
+        {/* Capacity badge */}
+        <span className="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+          <Users size={10} />
+          {venue.capacityMin}〜{venue.capacityMax}名
+        </span>
+
+        {/* 非公開表示（店名の代わり） */}
+        <div className="absolute bottom-3 left-3 right-3">
+          <div className="flex items-center gap-1.5 mb-0.5">
+            <Lock size={11} className="text-white/60" />
+            <p className="text-white/60 text-xs">会場名・地図は非公開</p>
           </div>
-          <h3 className="text-white font-black text-lg leading-tight">
+          <h3 className="text-white font-black text-lg leading-tight drop-shadow">
             {venue.area}エリア｜提携会場
           </h3>
         </div>
