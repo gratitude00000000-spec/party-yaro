@@ -16,7 +16,7 @@ import LineLink from '@/components/LineLink';
 import FaqAccordion from '@/components/FaqAccordion';
 
 const popularTags = [
-  { label: '結婚式二次会', href: '/venues?scene=結婚式二次会' },
+  { label: '結婚式二次会', href: '/wedding-afterparty' },
   { label: '50名以上', href: '/venues?capacity=min50' },
   { label: '貸切OK', href: '/venues?facility=貸切OK' },
   { label: 'プロジェクターあり', href: '/venues?facility=プロジェクター' },
@@ -266,6 +266,41 @@ export default function HomePage() {
               <MessageCircle size={20} />
               無料で相談してみる（LINE）
             </LineLink>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════
+          シーン別ガイドリンク
+      ═══════════════════════════════════════ */}
+      <section className="py-6 px-4 lg:px-8 xl:px-12 border-b border-gray-100">
+        <div className="lg:max-w-5xl lg:mx-auto">
+          <h2 className="section-title mb-4">
+            シーン別<span>会場ガイド</span>
+          </h2>
+          <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
+            <Link
+              href="/wedding-afterparty"
+              className="flex items-center gap-4 bg-gradient-to-r from-red-50 to-pink-50 border border-red-100 rounded-2xl p-4 hover:border-primary transition-colors active:scale-[0.98]"
+            >
+              <span className="text-3xl shrink-0">💍</span>
+              <div>
+                <p className="font-black text-gray-900 text-sm">結婚式二次会の会場を探す</p>
+                <p className="text-xs text-gray-500 mt-0.5">費用相場・選び方・おすすめ会場</p>
+              </div>
+              <ChevronRight size={16} className="text-primary ml-auto shrink-0" />
+            </Link>
+            <Link
+              href="/wedding-afterparty/naha"
+              className="flex items-center gap-4 bg-gradient-to-r from-red-50 to-pink-50 border border-red-100 rounded-2xl p-4 hover:border-primary transition-colors active:scale-[0.98]"
+            >
+              <span className="text-3xl shrink-0">🗺️</span>
+              <div>
+                <p className="font-black text-gray-900 text-sm">那覇・国際通りの二次会会場</p>
+                <p className="text-xs text-gray-500 mt-0.5">ゆいレール駅徒歩圏内の会場多数</p>
+              </div>
+              <ChevronRight size={16} className="text-primary ml-auto shrink-0" />
+            </Link>
           </div>
         </div>
       </section>
