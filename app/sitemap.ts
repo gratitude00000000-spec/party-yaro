@@ -40,6 +40,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
+  const weddingPages: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/wedding-afterparty`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${BASE_URL}/wedding-afterparty/naha`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.9 },
+  ];
+
   const areaPages: MetadataRoute.Sitemap = ['naha', 'kokusai-dori', 'chatan', 'okinawa-city'].map((slug) => ({
     url: `${BASE_URL}/areas/${slug}`,
     lastModified: new Date(),
@@ -61,5 +66,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...areaPages, ...venuePages, ...guidePages];
+  return [...staticPages, ...weddingPages, ...areaPages, ...venuePages, ...guidePages];
 }
