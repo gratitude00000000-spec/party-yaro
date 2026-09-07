@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { MessageCircle } from 'lucide-react';
+import Link from 'next/link';
+import { MessageCircle, ChevronRight } from 'lucide-react';
 import { PHONE } from '@/data/venues';
 import LineCta from '@/components/LineCta';
 import FaqAccordion from '@/components/FaqAccordion';
@@ -90,6 +91,26 @@ const faqCategories = [
       },
     ],
   },
+  {
+    category: '結婚式二次会について',
+    items: [
+      {
+        question: '沖縄で結婚式二次会の会場を探してもらえますか？',
+        answer:
+          'はい。那覇・国際通り・北谷・沖縄市エリアの結婚式二次会に対応した会場をご提案しています。費用相場・選び方の詳しい解説はぱーてぃー野郎の結婚式二次会ガイドをご覧ください。',
+      },
+      {
+        question: '結婚式二次会の費用相場はどのくらいですか？',
+        answer:
+          '沖縄の結婚式二次会は飲み放題込みで1名あたり3,500〜6,000円が相場です。会場使用料が無料の会場も多く、人数・グレードによって変わります。まずはLINEでご相談ください。',
+      },
+      {
+        question: '結婚式二次会の準備はいつ始めればよいですか？',
+        answer:
+          '結婚式の3〜6ヶ月前からの準備をおすすめします。人気会場は早めに埋まるため、日程が決まったらすぐにご相談ください。直前のご相談にも可能な限り対応します。',
+      },
+    ],
+  },
 ];
 
 const faqSchema = {
@@ -143,6 +164,21 @@ export default function FaqPage() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* 結婚式二次会ガイドへの誘導 */}
+      <div className="px-4 pt-2 pb-4">
+        <Link
+          href="/wedding-afterparty"
+          className="flex items-center gap-3 bg-red-50 border border-red-100 rounded-2xl p-4 hover:border-primary transition-colors"
+        >
+          <span className="text-2xl shrink-0">💍</span>
+          <div className="flex-1 min-w-0">
+            <p className="font-black text-gray-900 text-sm">結婚式二次会の会場を探している方へ</p>
+            <p className="text-xs text-gray-500 mt-0.5">費用相場・選び方・那覇・国際通りのおすすめ会場を完全解説</p>
+          </div>
+          <ChevronRight size={16} className="text-primary shrink-0" />
+        </Link>
       </div>
 
       {/* CTA */}
