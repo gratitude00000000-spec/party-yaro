@@ -440,7 +440,7 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-          <p className="text-white/40 text-xs text-center mt-4">
+          <p className="text-white/60 text-sm text-center mt-4">
             📍 {ADDRESS}
           </p>
         </div>
