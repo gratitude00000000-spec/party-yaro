@@ -441,9 +441,22 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
-            <p className="text-white/50 text-xs text-center border-t border-white/10 pt-4">
-              📍 {ADDRESS}
-            </p>
+            <div className="border-t border-white/10 pt-4">
+              <p className="text-white/50 text-xs text-center mb-3">
+                📍 {ADDRESS}
+              </p>
+              <div className="rounded-xl overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.303098286703!2d127.68296027525994!3d26.21933938954414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56989f88c17b5%3A0xfd4920ef7a1d8813!2z44Gx44O844Gm44GD44O86YeO6YOO!5e0!3m2!1sja!2sjp!4v1791957520163!5m2!1sja!2sjp"
+                  width="100%"
+                  height="200"
+                  style={{ border: 0, display: 'block' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
