@@ -416,30 +416,32 @@ export default function HomePage() {
       ═══════════════════════════════════════ */}
       <section className="px-4 lg:px-8 xl:px-12 pb-8">
         <div className="lg:max-w-5xl lg:mx-auto">
-          <div className="bg-gray-900 rounded-3xl p-6 lg:p-10 text-center lg:flex lg:items-center lg:text-left lg:gap-12">
-            <div className="lg:flex-1 mb-4 lg:mb-0">
-              <p className="text-gray-400 text-xs mb-2">いつでも無料相談受付中</p>
-              <h2 className="text-white font-black text-xl lg:text-3xl">
-                会場選びに迷ったら<br />まずはぱーてぃー野郎へ
-              </h2>
+          <div className="bg-gray-900 rounded-3xl p-6 lg:p-10 text-center">
+            <div className="lg:flex lg:items-center lg:text-left lg:gap-12 mb-4">
+              <div className="lg:flex-1 mb-4 lg:mb-0">
+                <p className="text-gray-400 text-xs mb-2">いつでも無料相談受付中</p>
+                <h2 className="text-white font-black text-xl lg:text-3xl">
+                  会場選びに迷ったら<br />まずはぱーてぃー野郎へ
+                </h2>
+              </div>
+              <div className="lg:flex-1 flex flex-col gap-3">
+                <LineLink
+                  location="final_cta"
+                  className="w-full flex items-center justify-center gap-3 bg-[#06C755] text-white font-black text-lg rounded-2xl py-4 shadow-lg shadow-green-900/40 active:scale-95 transition-transform"
+                >
+                  <MessageCircle size={22} />
+                  LINEで無料相談
+                </LineLink>
+                <a
+                  href={`tel:${PHONE}`}
+                  className="w-full flex items-center justify-center gap-2 bg-white/10 border border-white/20 text-white font-bold rounded-2xl py-3.5 hover:bg-white/20 transition-colors"
+                >
+                  <Phone size={18} />
+                  {PHONE}（24時間受付）
+                </a>
+              </div>
             </div>
-            <div className="lg:flex-1 flex flex-col gap-3">
-              <LineLink
-                location="final_cta"
-                className="w-full flex items-center justify-center gap-3 bg-[#06C755] text-white font-black text-lg rounded-2xl py-4 shadow-lg shadow-green-900/40 active:scale-95 transition-transform"
-              >
-                <MessageCircle size={22} />
-                LINEで無料相談
-              </LineLink>
-              <a
-                href={`tel:${PHONE}`}
-                className="w-full flex items-center justify-center gap-2 bg-white/10 border border-white/20 text-white font-bold rounded-2xl py-3.5 hover:bg-white/20 transition-colors"
-              >
-                <Phone size={18} />
-                {PHONE}（24時間受付）
-              </a>
-            </div>
-            <p className="text-white/60 text-xs text-center mt-4 lg:col-span-2">
+            <p className="text-white/50 text-xs text-center border-t border-white/10 pt-4">
               📍 {ADDRESS}
             </p>
           </div>
