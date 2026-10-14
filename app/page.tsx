@@ -439,10 +439,10 @@ export default function HomePage() {
                 {PHONE}（24時間受付）
               </a>
             </div>
+            <p className="text-white/60 text-xs text-center mt-4 lg:col-span-2">
+              📍 {ADDRESS}
+            </p>
           </div>
-          <p className="text-white/60 text-sm text-center mt-4">
-            📍 {ADDRESS}
-          </p>
         </div>
       </section>
 
