@@ -21,6 +21,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const venue = getVenueBySlug(params.slug);
   if (!venue) return {};
+  if (!venue.name.trim()) {
+    return { robots: { index: false, follow: false } };
+  }
   return {
     title: `${venue.name} | ${venue.area}の貸切パーティー会場`,
     description: `${venue.name}（${venue.area}）は${venue.capacityMin}〜${venue.capacityMax}名に対応。${venue.recommendedPoint.slice(0, 80)}...`,

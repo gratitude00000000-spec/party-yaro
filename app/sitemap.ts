@@ -52,7 +52,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  const venuePages: MetadataRoute.Sitemap = venues.map((v) => ({
+  const venuePages: MetadataRoute.Sitemap = venues.filter((v) => v.name.trim()).map((v) => ({
     url: `${BASE_URL}/venues/${v.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
