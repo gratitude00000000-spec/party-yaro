@@ -2,7 +2,7 @@ import type { Venue } from '@/lib/types';
 
 export const LINE_URL = 'https://line.me/ti/p/@381ivfov';
 export const PHONE = '098-975-5682';
-export const ADDRESS = '〒900-0013 沖縄県那覇市牧志2-18-4 2-C';
+export const ADDRESS = '沖縄県那覇市牧志2丁目18-4 パレット牧志ビル 2-C';
 
 export const venues: Venue[] = [
   {
@@ -998,7 +998,7 @@ export const venues: Venue[] = [
     slug: 'partyspace-next',
     area: '国際通り',
     extraAreas: ['那覇'],
-    address: '沖縄県那覇市牧志2丁目18-4 2-C',
+    address: '沖縄県那覇市牧志2丁目18-4 パレット牧志ビル 2-C',
     capacityMin: 30,
     capacityMax: 150,
     priceText: '¥3,500〜 / 1名（飲み放題込）',

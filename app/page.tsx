@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 import Image from 'next/image';
 import { MessageCircle, Search, ChevronRight, Star, CheckCircle, ArrowRight, Phone } from 'lucide-react';
 import { getFeaturedVenues } from '@/data/venues';
-import { PHONE, LINE_URL } from '@/data/venues';
+import { PHONE, LINE_URL, ADDRESS } from '@/data/venues';
 import VenueCard from '@/components/VenueCard';
 import LineBanner from '@/components/LineBanner';
 import LineLink from '@/components/LineLink';
@@ -440,6 +440,9 @@ export default function HomePage() {
               </a>
             </div>
           </div>
+          <p className="text-white/40 text-xs text-center mt-4">
+            📍 {ADDRESS}
+          </p>
         </div>
       </section>
 
